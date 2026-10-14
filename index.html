@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Andri Faisal Rahman — Senior Digital Ads & Growth Specialist</title>
-<meta name="description" content="Portofolio Senior Digital Ads Specialist berpengalaman 4+ tahun mengelola TikTok GMV Max, Shopee Ads, dan Meta Ads dengan akumulasi Rp3.6M+ GMV dan 40.000+ leads/orders terverifikasi.">
+<meta name="description" content="Portofolio Senior Digital Ads Specialist berpengalaman 4+ tahun mengelola TikTok GMV Max, Shopee Ads, dan Meta Ads dengan akumulasi Rp3,6 Miliar+ GMV dan 40.000+ leads/orders terverifikasi.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -396,6 +396,36 @@ footer {
   .highlight-card, .ai-showcase-grid, .agency-card { grid-template-columns: 1fr; padding: 24px; }
   footer { padding: 28px 20px; flex-direction: column; text-align: center; }
 }
+
+/* ADDITIONS */
+.case-card.featured { grid-column: 1 / -1; display: grid; grid-template-columns: 1fr 1fr; gap: 0 32px; align-items: start; }
+.case-card.featured > .ss-wrap { grid-column: 2; grid-row: 1 / span 6; margin-top: 0; align-self: center; }
+.case-card.featured > :not(.ss-wrap) { grid-column: 1; }
+.sub-title { font-size: 20px; font-weight: 800; color: #fff; margin: 8px 0 18px; }
+.testi-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+.testi-card { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; overflow: hidden; }
+.testi-card img { width: 100%; display: block; }
+.testi-card figcaption { padding: 12px 16px; font-size: 12.5px; color: var(--text-secondary); font-weight: 600; border-top: 1px solid var(--border); }
+.ai-duo { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 28px; }
+.ai-cap { font-size: 12px; color: var(--text-muted); margin-top: 10px; }
+.ai-showcase-grid { align-items: start; }
+.hustle-card { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 36px; align-items: center; background: var(--surface); border: 1px solid var(--border); border-radius: 18px; padding: 36px; }
+.hustle-period { font-size: 13px; color: var(--text-muted); margin-bottom: 8px; font-family: 'JetBrains Mono', monospace; }
+.hustle-title { font-size: 21px; font-weight: 800; color: #fff; margin-bottom: 12px; line-height: 1.3; }
+.hustle-desc { font-size: 14px; color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px; }
+.hustle-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+.hustle-note { font-size: 12px; color: var(--text-muted); margin-top: 12px; }
+.hustle-metrics { display: flex; flex-direction: column; gap: 10px; }
+.zoomable { cursor: zoom-in; }
+#lightbox { position: fixed; inset: 0; background: rgba(0,0,0,.92); display: none; align-items: center; justify-content: center; z-index: 200; padding: 20px; cursor: zoom-out; }
+#lightbox.open { display: flex; }
+#lightbox img { max-width: 100%; max-height: 100%; border-radius: 8px; }
+@media (max-width: 900px) {
+  .case-card.featured { display: flex; }
+  .ai-duo, .hustle-card { grid-template-columns: 1fr; padding: 0; }
+  .hustle-card { padding: 24px; }
+  .cases-grid { grid-template-columns: 1fr; }
+}
 </style>
 </head>
 
@@ -406,10 +436,11 @@ footer {
   <a href="#" class="nav-logo">AFR.</a>
   <ul class="nav-links">
     <li><a href="#showcase">Studi Kasus</a></li>
-    <li><a href="#creative-lab">AI &amp; Creative Lab</a></li>
-    <li><a href="#framework">Framework Iklan</a></li>
-    <li><a href="#skills">Keahlian &amp; Tools</a></li>
-    <li><a href="#tentang">Rekam Jejak</a></li>
+    <li><a href="#bukti">Testimoni</a></li>
+    <li><a href="#creative-lab">AI Lab</a></li>
+    <li><a href="#sidehustle">Side Hustle</a></li>
+    <li><a href="#framework">Framework</a></li>
+    <li><a href="#skills">Keahlian</a></li>
   </ul>
   <div class="nav-actions">
     <!-- Link file PDF CV Anda -->
@@ -425,7 +456,7 @@ footer {
     <h1 class="hero-name">Andri Faisal<br><span>Rahman</span></h1>
     <p class="hero-title">Senior Digital Ads &amp; Growth Specialist | TikTok GMV Max • Shopee Ads • Meta Ads</p>
     <p class="hero-tagline">
-      Spesialis periklanan berbayar dengan <strong>4+ tahun pengalaman</strong> mengakselerasi pertumbuhan omzet bisnis e-commerce dan perbankan. Terbukti mengelola <strong>Rp500 Juta+ ad spend</strong>, menghasilkan <strong>Rp3,6 Miliar+ GMV</strong> dan memfasilitasi <strong>Rp5 Miliar+ penyaluran dana</strong> via pendekatan data-driven dan otomatisasi materi iklan berbantuan AI.
+      Spesialis periklanan berbayar dengan <strong>4+ tahun pengalaman</strong> mengakselerasi pertumbuhan omzet bisnis e-commerce dan perbankan. Terbukti mengelola <strong>Rp500 Juta+ ad spend</strong>, menghasilkan <strong>Rp3,6 Miliar+ GMV</strong> dan memfasilitasi <strong>estimasi Rp5 Miliar+ penyaluran kredit</strong> via pendekatan data-driven dan otomatisasi materi iklan berbantuan AI.
     </p>
 
     <div class="hero-cta-group">
@@ -459,8 +490,8 @@ footer {
         <div class="stat-label">Akumulasi GMV</div>
       </div>
       <div class="stat">
-        <div class="stat-num blue">Rp5.0M+</div>
-        <div class="stat-label">Disbursement Kredit</div>
+        <div class="stat-num blue">Est. Rp5 Miliar+</div>
+        <div class="stat-label">Penyaluran Kredit</div>
       </div>
       <div class="stat">
         <div class="stat-num">40.000+</div>
@@ -475,7 +506,7 @@ footer {
 
   <div class="hero-photo">
     <div class="hero-photo-wrap">
-      <img src="assets/img/profile.jpg" onerror="this.src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80'" alt="Andri Faisal Rahman">
+      <img src="assets/img/profile.jpg" alt="Andri Faisal Rahman">
     </div>
   </div>
 </section>
@@ -494,10 +525,10 @@ footer {
     <button class="filter-tab" onclick="filterCases('meta', this)">Meta Ads (CTWA &amp; Lead Gen)</button>
   </div>
 
-  <div class="cases-grid">
+  <div class="cases-grid" id="caseGrid">
 
     <!-- CASE 1: MEGA SCALE - NURIL SHOES (TIKTOK GMV MAX) -->
-    <div class="case-card" data-category="tiktok">
+    <div class="case-card featured" data-category="tiktok">
       <div class="case-badge-row">
         <span class="case-platform tiktok">● TikTok GMV Max</span>
         <span class="case-industry">Fashion Footwear (Heels)</span>
@@ -519,7 +550,7 @@ footer {
       </div>
       <div class="ss-wrap">
         <div class="ss-cap">📊 Dashboard TikTok GMV Max — Nuril Shoes (Rp1,77M GMV)</div>
-        <img src="assets/img/tiktok-nuril-shoes.png" alt="TikTok Ads Nuril Shoes">
+        <img loading="lazy" class="zoomable" src="assets/img/tiktok-nuril-shoes.webp" alt="TikTok Ads Nuril Shoes">
       </div>
     </div>
 
@@ -546,7 +577,7 @@ footer {
       </div>
       <div class="ss-wrap">
         <div class="ss-cap">📊 Dashboard Sinergi — Shopee Ads (Rp255jt) &amp; TikTok (Rp510jt)</div>
-        <img src="assets/img/shopee-manasa-coffee.png" alt="Shopee Ads Coffee Beans">
+        <img loading="lazy" class="zoomable" src="assets/img/shopee-manasa-coffee.webp" alt="Shopee Ads Coffee Beans">
       </div>
     </div>
 
@@ -556,7 +587,7 @@ footer {
         <span class="case-platform meta">● Meta Ads CTWA &amp; LPWA</span>
         <span class="case-industry">Jasa Keuangan (Gadai BPKB)</span>
       </div>
-      <h3 class="case-title">Penyaluran Kredit: 9.719 Leads WhatsApp &amp; Estimasi Rp5 Miliar+ Disbursement</h3>
+      <h3 class="case-title">Penyaluran Kredit: 9.719 Leads WhatsApp &amp; Estimasi Rp5 Miliar+ Pencairan</h3>
       <div class="metrics-row">
         <div class="metric"><span class="metric-val">9.719</span><div class="metric-key">Leads WA Baru</div></div>
         <div class="metric"><span class="metric-val blue">5,8 Juta</span><div class="metric-key">Jangkauan Warga</div></div>
@@ -573,7 +604,7 @@ footer {
       </div>
       <div class="ss-wrap">
         <div class="ss-cap">📊 Dashboard Meta Ads Manager — Akun BA Zahwa BPRKS</div>
-        <img src="assets/img/meta-bprks-tasik.png" alt="Meta Ads BPRKS">
+        <img loading="lazy" class="zoomable" src="assets/img/meta-bprks-tasik.webp" alt="Meta Ads BPRKS">
       </div>
     </div>
 
@@ -600,7 +631,7 @@ footer {
       </div>
       <div class="ss-wrap">
         <div class="ss-cap">📊 Dashboard TikTok Live Shopping Ads</div>
-        <img src="assets/img/tiktok-live-fashion.png" alt="TikTok Live Ads">
+        <img loading="lazy" class="zoomable" src="assets/img/tiktok-live-fashion.webp" alt="TikTok Live Ads">
       </div>
     </div>
 
@@ -627,7 +658,7 @@ footer {
       </div>
       <div class="ss-wrap">
         <div class="ss-cap">📊 Dashboard Meta Ads — Klien Properti</div>
-        <img src="assets/img/meta-properti-leads.png" alt="Meta Ads Properti">
+        <img loading="lazy" class="zoomable" src="assets/img/meta-properti-leads.webp" alt="Meta Ads Properti">
       </div>
     </div>
 
@@ -654,14 +685,47 @@ footer {
       </div>
       <div class="ss-wrap">
         <div class="ss-cap">📊 Dashboard TikTok GMV Max — Produk Custom</div>
-        <img src="assets/img/tiktok-custom-print.png" alt="TikTok Custom Print">
+        <img loading="lazy" class="zoomable" src="assets/img/tiktok-custom-print.webp" alt="TikTok Custom Print">
+      </div>
+    </div>
+
+    <!-- CASE 7: OTOMOTIF -->
+    <div class="case-card" data-category="tiktok">
+      <div class="case-badge-row">
+        <span class="case-platform tiktok">● TikTok GMV Max</span>
+        <span class="case-industry">Aksesoris Otomotif</span>
+      </div>
+      <h3 class="case-title">ROI 31x dalam 3 Bulan dengan Budget Hanya Rp5,7 Juta</h3>
+      <div class="metrics-row">
+        <div class="metric"><span class="metric-val">31.67x</span><div class="metric-key">ROI</div></div>
+        <div class="metric"><span class="metric-val orange">Rp181 Jt</span><div class="metric-key">Revenue</div></div>
+        <div class="metric"><span class="metric-val">565</span><div class="metric-key">Pesanan</div></div>
+      </div>
+      <div class="star-box">
+        <div class="star-line"><span class="star-tag">Action:</span> Kampanye GMV Max untuk klien aksesoris otomotif dengan budget terkontrol.</div>
+        <div class="star-line"><span class="star-tag">Result:</span> Budget Rp5,7 Juta menghasilkan revenue Rp181 Juta, ROI konsisten sepanjang 3 bulan.</div>
+      </div>
+      <div class="case-period">
+        <span>📅 Jan – Mar 2026</span>
+        <span>Spend: Rp5,7 Juta</span>
+      </div>
+      <div class="ss-wrap">
+        <div class="ss-cap">📊 Dashboard TikTok GMV Max — Aksesoris Otomotif</div>
+        <img loading="lazy" class="zoomable" src="assets/img/tiktok-automotive.webp" alt="TikTok GMV Max Otomotif">
       </div>
     </div>
 
   </div>
 
+</section>
+
+<!-- BUKTI & TESTIMONI -->
+<section id="bukti">
+  <div class="section-label">Validasi Klien &amp; Media</div>
+  <h2 class="section-title">Bukti Nyata di Luar Angka:<br>Liputan TVRI &amp; Testimoni Klien</h2>
+
   <!-- FEATURED STORY: TVRI HIGHLIGHT -->
-  <div class="highlight-card" style="margin-top: 40px;">
+  <div class="highlight-card">
     <div>
       <div class="highlight-badge">⭐ Bukti Validasi Media Nasional</div>
       <h3 class="highlight-title">Klien F&amp;B Dapur Alpha Berhasil Diliput TVRI Nasional</h3>
@@ -679,6 +743,23 @@ footer {
       <div class="h-metric"><span class="h-metric-label">Cost per WhatsApp Lead</span><span class="h-metric-val">Rp4.437/chat</span></div>
     </div>
   </div>
+
+  <div class="ss-wrap" style="margin-bottom:36px;">
+    <div class="ss-cap">📊 Dashboard Meta Ads — Klien F&amp;B Dapur Alpha (CTWA)</div>
+    <img loading="lazy" class="zoomable" src="assets/img/meta-fnb-alpha.webp" alt="Meta Ads Dapur Alpha">
+  </div>
+
+  <h3 class="sub-title">💬 Kata Klien</h3>
+  <div class="testi-grid">
+    <figure class="testi-card">
+      <img loading="lazy" class="zoomable" src="assets/img/testi-tvri.webp" alt="Testimoni Dapur Alpha diliput TVRI">
+      <figcaption>Klien F&amp;B Dapur Alpha — konfirmasi liputan TVRI</figcaption>
+    </figure>
+    <figure class="testi-card">
+      <img loading="lazy" class="zoomable" src="assets/img/testi-properti.webp" alt="Testimoni klien properti">
+      <figcaption>Klien Properti — 30+ leads masuk</figcaption>
+    </figure>
+  </div>
 </section>
 
 <!-- SECTION KHUSUS: AI-DRIVEN CREATIVE LAB -->
@@ -686,27 +767,37 @@ footer {
   <div class="section-label">Inovasi &amp; Efisiensi Alur Kerja</div>
   <h2 class="section-title">AI-Driven Creative Lab:<br>Produksi Video Iklan Komersial Lebih Cepat &amp; Hemat</h2>
 
-  <div class="ai-showcase-grid">
+  <div class="ai-duo">
     <div class="ai-preview-box">
-      <div class="ai-preview-header">
-        <span>🎬 Generative Video Pipeline (Google Flow / Veo)</span>
-        <span style="color:var(--accent-purple);">Ultra Realistic</span>
-      </div>
+      <div class="ai-preview-header"><span>🎬 Google Flow / Veo — Madu Araa</span><span style="color:var(--accent-purple);">Produk Fisik</span></div>
       <div class="ai-preview-body">
-        <!-- Screenshot Google Flow Madu Araa & BPRKS -->
-        <img src="assets/img/ai-flow-madu-araa.png" alt="Google Flow Veo Generation">
-        <p style="font-size:12px;color:var(--text-muted);margin-top:10px;">
-          Contoh nyata produksi aset komersial produk fisik (Madu Araa) menggunakan Google Flow/Veo: meng-generate talent lokal, gestur berbicara, dan demo produk tanpa perlu biaya studio mahal.
-        </p>
+        <img loading="lazy" class="zoomable" src="assets/img/ai-flow-madu-araa.webp" alt="Google Flow Madu Araa">
+        <p class="ai-cap">Aset komersial produk fisik: talent lokal AI, gestur berbicara, dan demo produk tanpa biaya studio.</p>
       </div>
     </div>
+    <div class="ai-preview-box">
+      <div class="ai-preview-header"><span>🎬 Google Flow / Veo — BPR KS</span><span style="color:var(--accent-purple);">Jasa Keuangan</span></div>
+      <div class="ai-preview-body">
+        <img loading="lazy" class="zoomable" src="assets/img/ai-flow-bprks.webp" alt="Google Flow BPR KS">
+        <p class="ai-cap">Video CS &amp; pencairan uang untuk BPR KS Tasikmalaya dengan presenter AI berbahasa Indonesia.</p>
+      </div>
+    </div>
+  </div>
 
+  <div class="ai-showcase-grid">
+    <div class="ai-preview-box">
+      <div class="ai-preview-header"><span>✂️ CapCut Desktop Pro</span><span style="color:var(--accent-purple);">Retention Pacing</span></div>
+      <div class="ai-preview-body">
+        <img loading="lazy" class="zoomable" src="assets/img/capcut-editing.webp" alt="Editing CapCut Desktop Pro">
+        <p class="ai-cap">Editing multi-layer untuk menjaga retensi: ritme potongan, caption per kata, dan hook 3 detik pertama.</p>
+      </div>
+    </div>
     <div class="ai-workflow-steps">
       <div class="ai-step-card">
         <div class="ai-step-num">01</div>
         <div>
           <h4 class="ai-step-title">Generative Visuals (Google Flow &amp; Veo)</h4>
-          <p class="ai-step-desc">Membuat video komersial dengan talent presenter AI Indonesia (seperti studi kasus Madu Araa &amp; CS BPR KS) menghemat 85% biaya sewa talent dan shooting fisik.</p>
+          <p class="ai-step-desc">Membuat video komersial dengan talent presenter AI Indonesia (seperti studi kasus Madu Araa &amp; CS BPR KS) memangkas biaya sewa talent dan shooting fisik.</p>
         </div>
       </div>
       <div class="ai-step-card">
@@ -767,6 +858,30 @@ footer {
         </p>
         <div class="hook-metric">252 Pesanan | Revenue: Rp29,1 Juta</div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- SIDE HUSTLE -->
+<section id="sidehustle">
+  <div class="section-label">Personal Project</div>
+  <h2 class="section-title">Side Hustle: Membuktikan Ads<br>dari Kantong Sendiri</h2>
+  <div class="hustle-card">
+    <div>
+      <p class="hustle-period">Jan 2022 – Jan 2024</p>
+      <h3 class="hustle-title">Jualan Produk Fisik via Meta Ads, Sambil Kerja Penuh Waktu</h3>
+      <p class="hustle-desc">Sebelum mengelola klien, saya membuktikan kemampuan Meta Ads dengan berjualan produk fisik secara mandiri memakai strategi CTWA dan LPWA, menghasilkan Rp20 Juta+ dalam 4–5 bulan.</p>
+      <div class="hustle-tags">
+        <span class="skill-pill">Dompet</span><span class="skill-pill">Korset</span><span class="skill-pill">Parfum</span>
+        <span class="skill-pill">Vitamin Herbal</span><span class="skill-pill">Meta Ads CTWA</span><span class="skill-pill">Meta Ads LPWA</span>
+      </div>
+      <p class="hustle-note">📦 Volume pengiriman terverifikasi via mengantar.com &amp; lincah.id</p>
+    </div>
+    <div class="hustle-metrics">
+      <div class="h-metric"><span class="h-metric-label">Revenue 4–5 Bulan</span><span class="h-metric-val">Rp20 Jt+</span></div>
+      <div class="h-metric"><span class="h-metric-label">Durasi Berjalan</span><span class="h-metric-val">2 Tahun</span></div>
+      <div class="h-metric"><span class="h-metric-label">Strategi Utama</span><span class="h-metric-val">CTWA</span></div>
+      <div class="h-metric"><span class="h-metric-label">Kategori Produk</span><span class="h-metric-val">4+</span></div>
     </div>
   </div>
 </section>
@@ -923,20 +1038,28 @@ function filterCases(category, btn) {
   btn.classList.add('active');
 
   // Filter case cards
-  const cards = document.querySelectorAll('.case-card');
+  const cards = document.querySelectorAll('#caseGrid .case-card');
   cards.forEach(card => {
     if (category === 'all') {
-      card.style.display = 'flex';
+      card.style.display = '';
     } else {
       const cats = card.getAttribute('data-category') || '';
-      if (cats.includes(category)) {
-        card.style.display = 'flex';
+      if (cats.split(' ').includes(category)) {
+        card.style.display = '';
       } else {
         card.style.display = 'none';
       }
     }
   });
 }
+
+document.body.insertAdjacentHTML('beforeend','<div id="lightbox"><img alt=""></div>');
+const lb=document.getElementById('lightbox');
+document.addEventListener('click',e=>{
+  if(e.target.classList.contains('zoomable')){lb.querySelector('img').src=e.target.src;lb.classList.add('open');}
+  else if(lb.classList.contains('open')){lb.classList.remove('open');}
+});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')lb.classList.remove('open');});
 </script>
 
 </body>
