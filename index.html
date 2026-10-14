@@ -15,12 +15,12 @@
   --surface-elevated: #161b26;
   --border: rgba(255, 255, 255, 0.08);
   --border-glow: rgba(0, 229, 160, 0.3);
-  --accent: #00E5A0; / Growth & ROI /
-  --accent-blue: #38bdf8; / Meta Ads /
-  --accent-tiktok: #fe2c55; / TikTok Brand /
-  --accent-shopee: #ee4d2d; / Shopee Brand /
-  --accent-orange: #FF6B35; / Revenue /
-  --accent-purple: #a855f7; / AI & Automation /
+  --accent: #00E5A0; /* Growth & ROI */
+  --accent-blue: #38bdf8; /* Meta Ads */
+  --accent-tiktok: #fe2c55; /* TikTok Brand */
+  --accent-shopee: #ee4d2d; /* Shopee Brand */
+  --accent-orange: #FF6B35; /* Revenue */
+  --accent-purple: #a855f7; /* AI & Automation */
   --text: #f8fafc;
   --text-secondary: #94a3b8;
   --text-muted: #64748b;
@@ -29,7 +29,7 @@
   --placeholder-text: #facc15;
 }
 
-, ::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
 body {
   background: var(--bg);
@@ -44,7 +44,7 @@ body {
     radial-gradient(circle at 50% 80%, rgba(168, 85, 247, 0.03) 0%, transparent 50%);
 }
 
-/ PLACEHOLDER BADGE /
+/* PLACEHOLDER BADGE */
 .ph-tag {
   background: var(--placeholder-bg);
   border: 1px dashed var(--placeholder-border);
@@ -57,7 +57,7 @@ body {
   display: inline-block;
 }
 
-/ NAVIGATION /
+/* NAVIGATION */
 nav {
   position: fixed; top: 0; left: 0; right: 0; z-index: 100;
   display: flex; justify-content: space-between; align-items: center;
@@ -92,7 +92,7 @@ nav {
 }
 .btn-nav-cv:hover { transform: translateY(-1px); box-shadow: 0 6px 18px rgba(0, 229, 160, 0.4); }
 
-/ HERO /
+/* HERO */
 .hero {
   min-height: 92vh; display: grid; grid-template-columns: 1.25fr 0.75fr;
   align-items: center; padding: 125px 48px 65px; gap: 52px;
@@ -162,7 +162,7 @@ nav {
 }
 .contact-chip svg { width: 13px; height: 13px; flex-shrink: 0; }
 
-/ 4 STATS HERO /
+/* 4 STATS HERO */
 .hero-stats {
   display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px;
   padding: 14px; background: var(--surface); border: 1px solid var(--border);
@@ -188,7 +188,7 @@ nav {
   aspect-ratio: 3/4; display: block; background: var(--surface);
 }
 
-/ SECTIONS /
+/* SECTIONS */
 section { padding: 85px 48px; max-width: 1240px; margin: 0 auto; }
 section + section { border-top: 1px solid var(--border); }
 .section-label {
@@ -200,7 +200,7 @@ section + section { border-top: 1px solid var(--border); }
   margin-bottom: 32px; line-height: 1.25; color: #ffffff;
 }
 
-/ SECTION PENGALAMAN KERJA (TIMELINE) /
+/* SECTION PENGALAMAN KERJA (TIMELINE) */
 .timeline { display: flex; flex-direction: column; gap: 20px; position: relative; }
 .timeline-item {
   background: var(--surface); border: 1px solid var(--border); border-radius: 14px;
@@ -227,7 +227,7 @@ section + section { border-top: 1px solid var(--border); }
   content: '▸'; color: var(--accent); font-weight: bold; flex-shrink: 0;
 }
 
-/ INISIATIF MANDIRI COMPACT BOX /
+/* INISIATIF MANDIRI COMPACT BOX */
 .inisiatif-box {
   background: var(--surface-elevated); border: 1px solid var(--border);
   border-left: 3px solid var(--accent); border-radius: 10px;
@@ -236,7 +236,7 @@ section + section { border-top: 1px solid var(--border); }
 .inisiatif-title { font-size: 13.5px; font-weight: 700; color: #ffffff; margin-bottom: 4px; }
 .inisiatif-text { font-size: 12.5px; color: var(--text-secondary); line-height: 1.6; }
 
-/ STUDI KASUS CARDS /
+/* STUDI KASUS CARDS */
 .cases-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 24px; }
 .case-card {
   background: var(--surface); border: 1px solid var(--border); border-radius: 16px;
@@ -279,7 +279,7 @@ section + section { border-top: 1px solid var(--border); }
 .metric-val.blue { color: var(--accent-blue); }
 .metric-key { font-size: 9.5px; color: var(--text-muted); font-weight: 600; text-transform: uppercase; margin-top: 2px; }
 
-/ DETAIL ROWS DALAM KARTU /
+/* DETAIL ROWS DALAM KARTU */
 .case-details-list { display: flex; flex-direction: column; gap: 6px; font-size: 12.5px; line-height: 1.55; margin-bottom: 12px; }
 .detail-item { display: flex; align-items: flex-start; gap: 8px; }
 .detail-label { font-weight: 700; color: #ffffff; flex-shrink: 0; min-width: 82px; font-size: 11px; text-transform: uppercase; }
@@ -298,7 +298,7 @@ section + section { border-top: 1px solid var(--border); }
 }
 .ss-wrap img { width: 100%; display: block; background: #0c0d12; }
 
-/ EXPAND BUTTON /
+/* EXPAND BUTTON */
 .expand-btn-wrap { text-align: center; margin-top: 28px; }
 .btn-expand-cases {
   background: var(--surface); border: 1px solid var(--border); color: #ffffff;
@@ -307,7 +307,7 @@ section + section { border-top: 1px solid var(--border); }
 }
 .btn-expand-cases:hover { border-color: var(--accent); color: var(--accent); background: rgba(0, 229, 160, 0.05); }
 
-/ BUKTI & RETENSI SECTION /
+/* BUKTI & RETENSI SECTION */
 .retention-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; margin-bottom: 32px; }
 .retention-card {
   background: var(--surface); border: 1px solid var(--border); border-radius: 12px;
@@ -345,7 +345,7 @@ section + section { border-top: 1px solid var(--border); }
 .h-metric-label { font-size: 12px; color: var(--text-secondary); }
 .h-metric-val { font-family: 'JetBrains Mono', monospace; font-size: 14.5px; font-weight: 700; color: var(--accent); }
 
-/ FRAMEWORK STRATEGI /
+/* FRAMEWORK STRATEGI */
 .framework-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 18px; }
 .framework-card {
   background: var(--surface); border: 1px solid var(--border); border-radius: 14px;
@@ -358,7 +358,7 @@ section + section { border-top: 1px solid var(--border); }
 .framework-title { font-size: 15px; font-weight: 700; color: #ffffff; margin-bottom: 6px; }
 .framework-desc { font-size: 12.5px; color: var(--text-secondary); line-height: 1.6; }
 
-/ EKSPERIMEN AI SECTION (LOWER PRIORITY) /
+/* EKSPERIMEN AI SECTION (LOWER PRIORITY) */
 .ai-section-box {
   background: var(--surface); border: 1px solid var(--border); border-radius: 16px;
   padding: 28px; margin-top: 16px;
@@ -390,7 +390,7 @@ section + section { border-top: 1px solid var(--border); }
   color: var(--accent); margin-top: 8px; padding-top: 6px; border-top: 1px dashed var(--border);
 }
 
-/ KEAHLIAN MATRIX /
+/* KEAHLIAN MATRIX */
 .skills-matrix { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 18px; }
 .skill-category {
   background: var(--surface); border: 1px solid var(--border); border-radius: 14px;
@@ -406,7 +406,7 @@ section + section { border-top: 1px solid var(--border); }
   padding: 5px 11px; border-radius: 8px; font-size: 12px; font-weight: 500;
 }
 
-/ CTA PENUTUP (HIRING FOCUS) /
+/* CTA PENUTUP (HIRING FOCUS) */
 .cta-banner {
   background: linear-gradient(135deg, rgba(0, 229, 160, 0.1), rgba(56, 189, 248, 0.06));
   border: 1px solid rgba(0, 229, 160, 0.25); border-radius: 18px; padding: 44px 28px;
@@ -415,7 +415,7 @@ section + section { border-top: 1px solid var(--border); }
 .cta-banner h3 { font-size: 24px; font-weight: 800; margin-bottom: 10px; color: #ffffff; }
 .cta-banner p { font-size: 14px; color: var(--text-secondary); max-width: 580px; margin: 0 auto 24px; line-height: 1.65; }
 
-/ FOOTER /
+/* FOOTER */
 footer {
   padding: 36px 48px; border-top: 1px solid var(--border);
   display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;
