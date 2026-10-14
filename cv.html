@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>CV Andri Faisal Rahman - Digital Ads Specialist</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    @page {
+      size: A4 portrait;
+      margin: 10mm 12mm 10mm 12mm;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      color: #111827;
+      background: #ffffff;
+      font-size: 8.8pt;
+      line-height: 1.35;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* HEADER */
+    .header {
+      margin-bottom: 9px;
+      padding-bottom: 7px;
+      border-bottom: 1.5px solid #0f172a;
+    }
+    .name-title {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 3px;
+    }
+    h1.name {
+      font-size: 19pt;
+      font-weight: 800;
+      letter-spacing: -0.4px;
+      color: #0f172a;
+      line-height: 1;
+    }
+    .role-badge {
+      font-size: 9pt;
+      font-weight: 700;
+      color: #047857;
+      letter-spacing: 0.2px;
+    }
+    .contact-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      font-size: 8.2pt;
+      color: #475569;
+      font-weight: 500;
+    }
+    .contact-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .contact-item a {
+      color: #0284c7;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .contact-item a:hover {
+      text-decoration: underline;
+    }
+
+    /* SECTION */
+    .section {
+      margin-bottom: 8px;
+    }
+    .section-title {
+      font-size: 9.2pt;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: #0f172a;
+      border-bottom: 1px solid #cbd5e1;
+      padding-bottom: 2px;
+      margin-bottom: 5px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .section-title::before {
+      content: "";
+      display: inline-block;
+      width: 4px;
+      height: 11px;
+      background: #047857;
+      border-radius: 2px;
+    }
+
+    /* SUMMARY */
+    .summary-text {
+      font-size: 8.5pt;
+      color: #334155;
+      text-align: justify;
+      line-height: 1.38;
+    }
+
+    /* EXPERIENCE ITEM */
+    .exp-item {
+      margin-bottom: 6px;
+    }
+    .exp-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 1px;
+    }
+    .exp-role {
+      font-size: 9pt;
+      font-weight: 700;
+      color: #0f172a;
+    }
+    .exp-company {
+      font-weight: 600;
+      color: #0369a1;
+    }
+    .exp-date {
+      font-size: 8pt;
+      font-weight: 600;
+      color: #64748b;
+      white-space: nowrap;
+    }
+    .exp-location {
+      font-size: 7.8pt;
+      color: #94a3b8;
+      font-weight: 500;
+    }
+    ul.bullet-list {
+      list-style-type: none;
+      padding-left: 0;
+      margin-top: 2px;
+    }
+    ul.bullet-list li {
+      position: relative;
+      padding-left: 11px;
+      margin-bottom: 1.8px;
+      font-size: 8.3pt;
+      color: #334155;
+      line-height: 1.34;
+      text-align: justify;
+    }
+    ul.bullet-list li::before {
+      content: "•";
+      position: absolute;
+      left: 1px;
+      top: -0.5px;
+      color: #047857;
+      font-size: 9pt;
+      font-weight: bold;
+    }
+    .highlight {
+      font-weight: 700;
+      color: #0f172a;
+    }
+
+    /* SKILLS TABLE / GRID */
+    .skills-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+    .skill-row {
+      display: flex;
+      font-size: 8.3pt;
+      line-height: 1.35;
+    }
+    .skill-category {
+      width: 145px;
+      font-weight: 700;
+      color: #0f172a;
+      flex-shrink: 0;
+    }
+    .skill-items {
+      color: #334155;
+    }
+
+    /* DUAL COLUMNS FOR BOTTOM SECTION */
+    .bottom-cols {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+    .bottom-col-3 {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr 0.8fr;
+      gap: 10px;
+    }
+    .edu-item, .cert-item {
+      margin-bottom: 2px;
+      font-size: 8.2pt;
+      line-height: 1.32;
+    }
+    .edu-degree {
+      font-weight: 700;
+      color: #0f172a;
+    }
+    .edu-school {
+      color: #475569;
+    }
+    .cert-title {
+      font-weight: 700;
+      color: #0f172a;
+    }
+    .cert-issuer {
+      color: #475569;
+    }
+
+    /* PRINT OPTIMIZATION */
+    @media print {
+      body {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="name-title">
+      <h1 class="name">ANDRI FAISAL RAHMAN</h1>
+      <span class="role-badge">Digital Ads Specialist &bull; Paid Traffic</span>
+    </div>
+    <div class="contact-bar">
+      <span class="contact-item">📍 Jakarta, Indonesia</span>
+      <span class="contact-item">📱 0823-7438-1250</span>
+      <span class="contact-item">✉️ <a href="mailto:andrifaisalrahmans@gmail.com">andrifaisalrahmans@gmail.com</a></span>
+      <span class="contact-item">💼 <a href="https://linkedin.com/in/andrifaisalrahman" target="_blank">linkedin.com/in/andrifaisalrahman</a></span>
+      <span class="contact-item">🌐 <a href="https://faisal686.github.io/portofolio" target="_blank">faisal686.github.io/portofolio</a></span>
+    </div>
+  </header>
+
+  <!-- RINGKASAN PROFESIONAL -->
+  <section class="section">
+    <h2 class="section-title">Ringkasan Profesional</h2>
+    <p class="summary-text">
+      <strong>Digital Ads Specialist</strong> dengan <strong>4+ tahun pengalaman</strong> merancang, mengeksekusi, dan mengoptimasi iklan berbayar di <strong>Meta Ads, TikTok GMV Max, dan Shopee Ads</strong> untuk industri F&amp;B, properti, jasa keuangan, dan e-commerce. Mengelola total ad spend <strong>Rp500 Juta+</strong> dengan pengalaman menangani <strong>25 klien agensi aktif</strong> per bulan (budget Rp75 juta+/bulan), sukses mengeskalasi <strong>ROAS GMV Max dari 5x menjadi 8x</strong>, serta menjaga <strong>Cost Per Lead (CPL) Rp5.000–8.000</strong> pada kampanye lead generation. Berlatar 5+ tahun penugasan di instansi pemerintah (Kemkomdigi) dengan <strong>dua kali predikat Best Agent</strong>, memiliki sertifikasi pemrograman <strong>Python dari Cisco &amp; Digitalent Kominfo</strong>, serta fasih memanfaatkan AI &amp; automasi alur kerja periklanan.
+    </p>
+  </section>
+
+  <!-- PENGALAMAN KERJA -->
+  <section class="section">
+    <h2 class="section-title">Pengalaman Kerja</h2>
+
+    <!-- FREELANCE -->
+    <div class="exp-item">
+      <div class="exp-header">
+        <div>
+          <span class="exp-role">Digital Ads Specialist &amp; Media Buyer</span>
+          <span class="exp-company">&bull; Freelance (Multi-Brand)</span>
+        </div>
+        <span class="exp-date">Januari 2022 – Sekarang</span>
+      </div>
+      <ul class="bullet-list">
+        <li>Mengelola kampanye multi-platform harian: <span class="highlight">Meta Ads (CTWA, LPWA, Lead Gen), TikTok GMV Max, dan Shopee Ads</span> untuk 5+ klien aktif per bulan di sektor F&amp;B, properti, ritel, dan jasa keuangan.</li>
+        <li>Menjaga efisiensi <span class="highlight">Cost Per Lead (CPL) Rp5.000–8.000</span> pada kampanye akuisisi leads Meta Ads untuk sektor properti dan pinjaman modal usaha.</li>
+        <li>Merancang kampanye Meta Ads CTWA untuk klien F&amp;B di Kendari (Sulawesi Tenggara) yang sukses viral dan mendapatkan <span class="highlight">liputan berita TVRI nasional/lokal</span>.</li>
+        <li>Mengeksekusi strategi funnel CTWA &amp; LPWA untuk brand ritel mandiri, menghasilkan <span class="highlight">revenue Rp20 juta+ dalam tempo 4–5 bulan</span>.</li>
+        <li>Memproduksi materi iklan terarah dengan bantuan AI (<span class="highlight">ChatGPT, Claude, Gemini, CapCut</span>) serta mengeksplorasi automasi agen AI untuk alur kerja operasional iklan.</li>
+      </ul>
+    </div>
+
+    <!-- JAWARA DIGITAL AGENCY -->
+    <div class="exp-item">
+      <div class="exp-header">
+        <div>
+          <span class="exp-role">Digital Ads Specialist</span>
+          <span class="exp-company">&bull; Jawara Digital Agency</span>
+        </div>
+        <span class="exp-date">Agustus 2025 – Juni 2026</span>
+      </div>
+      <ul class="bullet-list">
+        <li>Mengelola akun periklanan untuk <span class="highlight">25 klien agensi aktif per bulan</span> di sektor F&amp;B, properti, dan perbankan/finansial (Meta Ads, TikTok GMV Max, Shopee Ads) dengan kumulatif ad spend <span class="highlight">Rp75 juta+ per bulan</span>.</li>
+        <li>Meningkatkan performa klien TikTok GMV Max dengan eskalasi <span class="highlight">ROAS dari 5x menjadi 8x dalam kurun 3 bulan</span> (budget ~Rp10 juta/bln) melalui A/B testing materi kreatif berkala, segmentasi audiens, dan restrukturisasi campaign.</li>
+      </ul>
+    </div>
+
+    <!-- KELAS JAWARA WORKSHOP -->
+    <div class="exp-item">
+      <div class="exp-header">
+        <div>
+          <span class="exp-role">Workshop Technical Assistant</span>
+          <span class="exp-company">&bull; Kelas Jawara (Paruh Waktu)</span>
+        </div>
+        <span class="exp-date">Januari 2025 – Maret 2026</span>
+      </div>
+      <ul class="bullet-list">
+        <li>Mendampingi <span class="highlight">20–50 peserta per sesi</span> (pemilik UMKM, profesional korporat, dan career switcher) dalam praktik teknis setup Meta Ads Manager, TikTok Shop Ads, dan integrasi pixel tracking konversi.</li>
+        <li>Menyelesaikan kendala teknis peserta secara real-time: audit akun iklan, banding penolakan iklan (ad rejection), setup katalog produk, verifikasi domain, dan sinkronisasi Server-Side CAPI.</li>
+      </ul>
+    </div>
+
+    <!-- KEMKOMDIGI -->
+    <div class="exp-item">
+      <div class="exp-header">
+        <div>
+          <span class="exp-role">Staf Konsultasi Perizinan &amp; Layanan Korporat</span>
+          <span class="exp-company">&bull; Kemkomdigi RI</span>
+          <span class="exp-location">(Penugasan: PT GAD, PT Jasnita, PT VADS)</span>
+        </div>
+        <span class="exp-date">Juli 2019 – Desember 2024</span>
+      </div>
+      <ul class="bullet-list">
+        <li>Dipercaya selama <span class="highlight">5+ tahun penugasan di Kemkomdigi</span> melayani konsultasi &amp; perizinan entitas korporat skala besar di PTSP (termasuk <span class="highlight">Telkomsel, JNE, MyRepublic</span>) untuk sektor telekomunikasi, penyiaran, dan pos.</li>
+        <li>Meraih <span class="highlight">2x Predikat Best Agent</span> atas kualitas layanan prima, kepatuhan verifikasi dokumen regulasi, dan produktivitas tinggi penanganan tiket harian.</li>
+        <li>Mengelola penyelesaian tiket aduan konsumen telekomunikasi (BRTI) dan eskalasi ke operator seluler sesuai Service Level Agreement (SLA).</li>
+      </ul>
+    </div>
+
+    <!-- CS INBOUND XL AXIATA -->
+    <div class="exp-item">
+      <div class="exp-header">
+        <div>
+          <span class="exp-role">Customer Service Specialist, Inbound XL Axiata</span>
+          <span class="exp-company">&bull; PT VADS Indonesia</span>
+        </div>
+        <span class="exp-date">April 2018 – Mei 2019</span>
+      </div>
+      <ul class="bullet-list">
+        <li>Menyelesaikan panggilan inquiry pelanggan telekomunikasi dengan tingkat <span class="highlight">First Contact Resolution tinggi</span> dan pencatatan tiket akurat pada sistem CRM enterprise.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- KEAHLIAN -->
+  <section class="section">
+    <h2 class="section-title">Keahlian Teknis &amp; Kompetensi</h2>
+    <div class="skills-grid">
+      <div class="skill-row">
+        <span class="skill-category">Paid Traffic &amp; Ads Ops:</span>
+        <span class="skill-items">Meta Ads (FB &amp; IG), TikTok Ads (GMV Max &amp; Live), Shopee Ads, Click to WhatsApp (CTWA), Landing Page WhatsApp (LPWA), Lead Generation, CBO/ABO Scaling, Audience Research, A/B Creative Testing, ROAS/ROI Optimization, CPA/CPL Control, Meta Pixel &amp; Conversion API (CAPI), Tracking Event Konversi.</span>
+      </div>
+      <div class="skill-row">
+        <span class="skill-category">Konten &amp; Tools Kreatif:</span>
+        <span class="skill-items">CapCut, Canva, CorelDRAW, Scalev CRM, Meta Ad Library, TikTok Creative Center, WordPress/Elementor Landing Page Builder.</span>
+      </div>
+      <div class="skill-row">
+        <span class="skill-category">AI, Data &amp; Automasi:</span>
+        <span class="skill-items">ChatGPT, Claude, Gemini (AI Content &amp; Hook Ideation), Agentic AI Workflows, Python Scripting (Automasi Analisis Data).</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- PENDIDIKAN, SERTIFIKASI & BAHASA (3 KOLOM KOMPAK) -->
+  <section class="section">
+    <div class="bottom-col-3">
+      <!-- PENDIDIKAN -->
+      <div>
+        <h2 class="section-title">Pendidikan</h2>
+        <div class="edu-item">
+          <div class="edu-degree">S.E.I. Ekonomi &amp; Perbankan Islam</div>
+          <div class="edu-school">Universitas Muhammadiyah Yogyakarta</div>
+          <div style="font-size: 7.8pt; color: #64748b; font-weight: 600;">2013 – 2017 &bull; IPK: 3,33 / 4,00</div>
+        </div>
+      </div>
+
+      <!-- SERTIFIKASI & PELATIHAN -->
+      <div>
+        <h2 class="section-title">Sertifikasi &amp; Pelatihan</h2>
+        <div class="cert-item">
+          <div class="cert-title">PCAP: Programming Essentials in Python</div>
+          <div class="cert-issuer">Cisco Networking Academy &bull; DTS Kominfo (2024)</div>
+        </div>
+        <div class="cert-item">
+          <div class="cert-title">Bootcamp Data Science</div>
+          <div class="cert-issuer">Qarir Generator (2023–2024)</div>
+        </div>
+        <div class="cert-item">
+          <div class="cert-title">Kursus Komprehensif Meta Ads</div>
+          <div class="cert-issuer">Pelatihan Praktisi Industri (2021)</div>
+        </div>
+      </div>
+
+      <!-- BAHASA -->
+      <div>
+        <h2 class="section-title">Bahasa</h2>
+        <div class="edu-item">
+          <div><strong>Indonesia:</strong> Penutur Asli (Native)</div>
+          <div><strong>Inggris:</strong> Menengah (Professional)</div>
+          <div><strong>Arab:</strong> Dasar – Menengah</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
