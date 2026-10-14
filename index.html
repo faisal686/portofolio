@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Andri Faisal Rahman — Senior Digital Ads & Growth Specialist</title>
-<meta name="description" content="Portofolio Senior Digital Ads Specialist berpengalaman 4+ tahun mengelola TikTok GMV Max, Shopee Ads, dan Meta Ads dengan akumulasi Rp3,6 Miliar+ GMV dan 40.000+ leads/orders terverifikasi.">
+<title>Andri Faisal Rahman — Digital Ads Specialist | Meta Ads • TikTok GMV Max • Shopee Ads</title>
+<meta name="description" content="Digital Ads Specialist dengan 4+ tahun pengalaman mengelola kampanye Meta Ads, TikTok GMV Max, dan Shopee Ads. Terbukti mengelola budget skala agensi dan multi-klien. Open to Work untuk posisi Full-Time / Remote.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -15,18 +15,21 @@
   --surface-elevated: #161b26;
   --border: rgba(255, 255, 255, 0.08);
   --border-glow: rgba(0, 229, 160, 0.3);
-  --accent: #00E5A0; /* Emerald Growth / ROI */
-  --accent-blue: #38bdf8; /* Meta Ads */
-  --accent-tiktok: #fe2c55; /* TikTok Brand */
-  --accent-shopee: #ee4d2d; /* Shopee Brand */
-  --accent-orange: #FF6B35; /* High Revenue */
-  --accent-purple: #a855f7; /* AI & Tech */
+  --accent: #00E5A0; / Growth & ROI /
+  --accent-blue: #38bdf8; / Meta Ads /
+  --accent-tiktok: #fe2c55; / TikTok Brand /
+  --accent-shopee: #ee4d2d; / Shopee Brand /
+  --accent-orange: #FF6B35; / Revenue /
+  --accent-purple: #a855f7; / AI & Automation /
   --text: #f8fafc;
   --text-secondary: #94a3b8;
   --text-muted: #64748b;
+  --placeholder-bg: rgba(234, 179, 8, 0.12);
+  --placeholder-border: rgba(234, 179, 8, 0.4);
+  --placeholder-text: #facc15;
 }
 
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+, ::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
 body {
   background: var(--bg);
@@ -41,12 +44,25 @@ body {
     radial-gradient(circle at 50% 80%, rgba(168, 85, 247, 0.03) 0%, transparent 50%);
 }
 
-/* NAVIGATION */
+/ PLACEHOLDER BADGE /
+.ph-tag {
+  background: var(--placeholder-bg);
+  border: 1px dashed var(--placeholder-border);
+  color: var(--placeholder-text);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11.5px;
+  font-weight: 600;
+  display: inline-block;
+}
+
+/ NAVIGATION /
 nav {
   position: fixed; top: 0; left: 0; right: 0; z-index: 100;
   display: flex; justify-content: space-between; align-items: center;
   padding: 16px 48px;
-  background: rgba(9, 10, 15, 0.85);
+  background: rgba(9, 10, 15, 0.88);
   backdrop-filter: blur(16px);
   border-bottom: 1px solid var(--border);
 }
@@ -64,37 +80,22 @@ nav {
 .nav-links a:hover { color: var(--accent); }
 .nav-actions { display: flex; gap: 10px; align-items: center; }
 .btn-nav-cv {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid var(--border);
-  color: #ffffff;
-  padding: 6px 14px;
+  background: var(--accent);
+  color: #090a0f !important;
+  padding: 7px 16px;
   border-radius: 9999px;
   font-size: 12.5px;
-  font-weight: 600;
+  font-weight: 700;
   text-decoration: none;
   transition: all 0.2s;
+  box-shadow: 0 4px 14px rgba(0, 229, 160, 0.25);
 }
-.btn-nav-cv:hover {
-  background: rgba(255, 255, 255, 0.1);
-  border-color: rgba(255, 255, 255, 0.3);
-}
-.btn-nav-cta {
-  background: rgba(0, 229, 160, 0.12);
-  border: 1px solid var(--border-glow);
-  color: var(--accent) !important;
-  padding: 6px 14px;
-  border-radius: 9999px;
-  font-size: 12.5px;
-  font-weight: 600;
-  text-decoration: none;
-  transition: all 0.2s;
-}
-.btn-nav-cta:hover { background: var(--accent); color: #090a0f !important; }
+.btn-nav-cv:hover { transform: translateY(-1px); box-shadow: 0 6px 18px rgba(0, 229, 160, 0.4); }
 
-/* HERO */
+/ HERO /
 .hero {
-  min-height: 100vh; display: grid; grid-template-columns: 1.2fr 0.8fr;
-  align-items: center; padding: 130px 48px 70px; gap: 56px;
+  min-height: 92vh; display: grid; grid-template-columns: 1.25fr 0.75fr;
+  align-items: center; padding: 125px 48px 65px; gap: 52px;
   position: relative; max-width: 1240px; margin: 0 auto;
 }
 .hero-badge {
@@ -103,118 +104,153 @@ nav {
   border: 1px solid rgba(0, 229, 160, 0.25);
   color: var(--accent);
   padding: 6px 14px; border-radius: 9999px;
-  font-size: 12px; font-weight: 600; letter-spacing: 0.3px; margin-bottom: 20px;
+  font-size: 12px; font-weight: 600; letter-spacing: 0.3px; margin-bottom: 18px;
 }
 .hero-badge::before { content: ''; width: 7px; height: 7px; background: var(--accent); border-radius: 50%; box-shadow: 0 0 8px var(--accent); }
 .hero-name {
-  font-size: clamp(38px, 4.5vw, 56px); font-weight: 800; line-height: 1.1;
-  letter-spacing: -1.5px; margin-bottom: 12px; color: #ffffff;
+  font-size: clamp(38px, 4.3vw, 56px); font-weight: 800; line-height: 1.1;
+  letter-spacing: -1.5px; margin-bottom: 10px; color: #ffffff;
 }
 .hero-name span {
-  background: linear-gradient(135deg, var(--accent) 0%, #38bdf8 60%, var(--accent-purple) 100%);
+  background: linear-gradient(135deg, var(--accent) 0%, #38bdf8 100%);
   -webkit-background-clip: text; -webkit-text-fill-color: transparent;
 }
 .hero-title {
   font-size: 13.5px; color: var(--accent-blue); font-weight: 700;
-  letter-spacing: 0.5px; margin-bottom: 16px; text-transform: uppercase;
+  letter-spacing: 0.8px; margin-bottom: 16px; text-transform: uppercase;
 }
 .hero-tagline {
-  font-size: 15.5px; color: var(--text-secondary); max-width: 580px; line-height: 1.7;
-  margin-bottom: 26px;
+  font-size: 15px; color: var(--text-secondary); max-width: 580px; line-height: 1.7;
+  margin-bottom: 24px;
 }
 .hero-tagline strong { color: #ffffff; font-weight: 700; }
 
-.hero-cta-group { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 30px; }
+.hero-cta-group { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 24px; align-items: center; }
 .btn-primary {
   display: inline-flex; align-items: center; gap: 8px;
-  background: var(--accent); color: #090a0f; padding: 10px 22px; border-radius: 9999px;
+  background: var(--accent); color: #090a0f; padding: 11px 22px; border-radius: 9999px;
   font-size: 13.5px; font-weight: 700; text-decoration: none; transition: all 0.2s;
 }
 .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0, 229, 160, 0.4); }
 .btn-secondary {
   display: inline-flex; align-items: center; gap: 8px;
   background: var(--surface); border: 1px solid var(--border); color: #ffffff;
-  padding: 10px 22px; border-radius: 9999px; font-size: 13.5px; font-weight: 600;
+  padding: 10px 20px; border-radius: 9999px; font-size: 13.5px; font-weight: 600;
   text-decoration: none; transition: all 0.2s;
 }
 .btn-secondary:hover { border-color: rgba(255, 255, 255, 0.3); background: var(--surface-elevated); transform: translateY(-2px); }
 
-.hero-contacts { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 32px; }
+.hero-contacts { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 28px; }
 .contact-chip {
   display: flex; align-items: center; gap: 8px;
   background: var(--surface); border: 1px solid var(--border);
-  padding: 6px 14px; border-radius: 100px; font-size: 12.5px; color: var(--text-secondary);
+  padding: 6px 14px; border-radius: 100px; font-size: 12px; color: var(--text-secondary);
   text-decoration: none; transition: all 0.2s;
 }
 .contact-chip:hover {
   border-color: var(--accent); color: var(--accent); transform: translateY(-2px);
   background: rgba(0, 229, 160, 0.05);
 }
-.contact-chip svg { width: 14px; height: 14px; flex-shrink: 0; }
+.contact-chip.linkedin-highlight {
+  border-color: rgba(56, 189, 248, 0.4);
+  color: #ffffff;
+  background: rgba(56, 189, 248, 0.08);
+}
+.contact-chip.linkedin-highlight:hover {
+  border-color: var(--accent-blue);
+  background: rgba(56, 189, 248, 0.16);
+}
+.contact-chip svg { width: 13px; height: 13px; flex-shrink: 0; }
 
-/* 4 KEY STATS HERO */
+/ 4 STATS HERO /
 .hero-stats {
-  display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px;
-  padding: 16px; background: var(--surface); border: 1px solid var(--border);
-  border-radius: 16px;
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px;
+  padding: 14px; background: var(--surface); border: 1px solid var(--border);
+  border-radius: 14px;
 }
 .stat { text-align: center; }
 .stat-num {
-  font-family: 'JetBrains Mono', monospace; font-size: 21px; font-weight: 800;
+  font-family: 'JetBrains Mono', monospace; font-size: 19px; font-weight: 800;
   color: var(--accent); letter-spacing: -0.5px;
 }
 .stat-num.orange { color: var(--accent-orange); }
 .stat-num.blue { color: var(--accent-blue); }
 .stat-num.purple { color: var(--accent-purple); }
-.stat-label { font-size: 10.5px; color: var(--text-muted); font-weight: 600; text-transform: uppercase; margin-top: 4px; }
+.stat-label { font-size: 10px; color: var(--text-muted); font-weight: 600; text-transform: uppercase; margin-top: 3px; }
 
 .hero-photo { display: flex; justify-content: center; align-items: center; position: relative; }
 .hero-photo-wrap {
-  position: relative; border-radius: 24px; padding: 6px;
-  background: linear-gradient(135deg, rgba(0, 229, 160, 0.4), rgba(56, 189, 248, 0.2), rgba(168, 85, 247, 0.3));
+  position: relative; border-radius: 22px; padding: 6px;
+  background: linear-gradient(135deg, rgba(0, 229, 160, 0.35), rgba(56, 189, 248, 0.2), rgba(168, 85, 247, 0.25));
 }
 .hero-photo img {
-  width: 100%; max-width: 340px; border-radius: 20px; object-fit: cover;
+  width: 100%; max-width: 320px; border-radius: 18px; object-fit: cover;
   aspect-ratio: 3/4; display: block; background: var(--surface);
 }
 
-/* SECTIONS */
-section { padding: 90px 48px; max-width: 1240px; margin: 0 auto; }
+/ SECTIONS /
+section { padding: 85px 48px; max-width: 1240px; margin: 0 auto; }
 section + section { border-top: 1px solid var(--border); }
 .section-label {
   font-size: 11px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase;
   color: var(--accent); margin-bottom: 8px;
 }
 .section-title {
-  font-size: clamp(24px, 2.5vw, 34px); font-weight: 800; letter-spacing: -1px;
-  margin-bottom: 36px; line-height: 1.25; color: #ffffff;
+  font-size: clamp(23px, 2.4vw, 32px); font-weight: 800; letter-spacing: -0.8px;
+  margin-bottom: 32px; line-height: 1.25; color: #ffffff;
 }
 
-/* FILTER TABS */
-.filter-tabs { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 32px; }
-.filter-tab {
-  background: var(--surface); border: 1px solid var(--border); color: var(--text-secondary);
-  padding: 8px 18px; border-radius: 9999px; font-size: 12.5px; font-weight: 600;
-  cursor: pointer; transition: all 0.2s;
+/ SECTION PENGALAMAN KERJA (TIMELINE) /
+.timeline { display: flex; flex-direction: column; gap: 20px; position: relative; }
+.timeline-item {
+  background: var(--surface); border: 1px solid var(--border); border-radius: 14px;
+  padding: 24px; position: relative; transition: border-color 0.2s;
 }
-.filter-tab:hover { color: #ffffff; border-color: rgba(255, 255, 255, 0.25); }
-.filter-tab.active { background: var(--accent); color: #090a0f; border-color: var(--accent); font-weight: 700; }
+.timeline-item:hover { border-color: rgba(0, 229, 160, 0.3); }
+.timeline-header {
+  display: flex; justify-content: space-between; align-items: flex-start;
+  flex-wrap: wrap; gap: 8px; margin-bottom: 10px;
+}
+.timeline-role { font-size: 17px; font-weight: 800; color: #ffffff; }
+.timeline-company { font-size: 13.5px; color: var(--accent-blue); font-weight: 600; margin-top: 2px; }
+.timeline-period {
+  font-family: 'JetBrains Mono', monospace; font-size: 12px;
+  color: var(--accent); background: rgba(0, 229, 160, 0.08);
+  padding: 4px 10px; border-radius: 6px; font-weight: 600;
+}
+.timeline-desc { font-size: 13.5px; color: var(--text-secondary); line-height: 1.65; }
+.timeline-bullets { list-style: none; margin-top: 10px; display: flex; flex-direction: column; gap: 6px; }
+.timeline-bullets li {
+  font-size: 13px; color: var(--text-secondary); display: flex; align-items: flex-start; gap: 8px;
+}
+.timeline-bullets li::before {
+  content: '▸'; color: var(--accent); font-weight: bold; flex-shrink: 0;
+}
 
-/* CASES GRID & CARDS */
-.cases-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 24px; }
+/ INISIATIF MANDIRI COMPACT BOX /
+.inisiatif-box {
+  background: var(--surface-elevated); border: 1px solid var(--border);
+  border-left: 3px solid var(--accent); border-radius: 10px;
+  padding: 16px 20px; margin-top: 20px;
+}
+.inisiatif-title { font-size: 13.5px; font-weight: 700; color: #ffffff; margin-bottom: 4px; }
+.inisiatif-text { font-size: 12.5px; color: var(--text-secondary); line-height: 1.6; }
+
+/ STUDI KASUS CARDS /
+.cases-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 24px; }
 .case-card {
   background: var(--surface); border: 1px solid var(--border); border-radius: 16px;
-  padding: 26px; transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  padding: 24px; transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   position: relative; overflow: hidden; display: flex; flex-direction: column;
 }
 .case-card:hover {
   border-color: rgba(0, 229, 160, 0.35); transform: translateY(-4px);
-  box-shadow: 0 16px 36px -12px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 14px 32px -10px rgba(0, 0, 0, 0.5);
 }
 
-.case-badge-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+.case-badge-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; gap: 8px; flex-wrap: wrap; }
 .case-platform {
-  display: inline-flex; align-items: center; gap: 6px; padding: 4px 10px;
+  display: inline-flex; align-items: center; gap: 6px; padding: 3px 9px;
   border-radius: 9999px; font-size: 10.5px; font-weight: 700; letter-spacing: 0.5px;
   text-transform: uppercase;
 }
@@ -222,210 +258,191 @@ section + section { border-top: 1px solid var(--border); }
 .case-platform.shopee { color: var(--accent-shopee); background: rgba(238, 77, 45, 0.12); border: 1px solid rgba(238, 77, 45, 0.25); }
 .case-platform.meta { color: var(--accent-blue); background: rgba(56, 189, 248, 0.12); border: 1px solid rgba(56, 189, 248, 0.25); }
 .case-platform.omni { color: var(--accent); background: rgba(0, 229, 160, 0.12); border: 1px solid rgba(0, 229, 160, 0.25); }
-.case-platform.ai { color: var(--accent-purple); background: rgba(168, 85, 247, 0.12); border: 1px solid rgba(168, 85, 247, 0.25); }
 
-.case-industry { font-size: 12px; color: var(--text-muted); font-weight: 600; text-transform: uppercase; }
-.case-title { font-size: 17.5px; font-weight: 800; margin-bottom: 12px; line-height: 1.35; color: #ffffff; }
+.case-context-tag {
+  font-size: 11px; font-weight: 600; color: var(--text-muted);
+  background: var(--surface-elevated); padding: 3px 8px; border-radius: 6px; border: 1px solid var(--border);
+}
 
-.metrics-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin: 12px 0 16px; }
+.case-title { font-size: 16.5px; font-weight: 800; margin-bottom: 12px; line-height: 1.35; color: #ffffff; }
+
+.metrics-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin: 10px 0 14px; }
 .metric {
   background: var(--surface-elevated); border: 1px solid var(--border);
-  border-radius: 10px; padding: 10px 8px; text-align: center;
+  border-radius: 10px; padding: 9px 6px; text-align: center;
 }
 .metric-val {
-  font-family: 'JetBrains Mono', monospace; font-size: 16px; font-weight: 800;
+  font-family: 'JetBrains Mono', monospace; font-size: 15px; font-weight: 800;
   color: var(--accent); letter-spacing: -0.5px; display: block;
 }
 .metric-val.orange { color: var(--accent-orange); }
 .metric-val.blue { color: var(--accent-blue); }
-.metric-val.purple { color: var(--accent-purple); }
 .metric-key { font-size: 9.5px; color: var(--text-muted); font-weight: 600; text-transform: uppercase; margin-top: 2px; }
 
-/* STAR FRAMEWORK BOX IN CASE CARD */
-.star-box {
-  background: rgba(255, 255, 255, 0.02);
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  border-radius: 10px; padding: 14px; margin-bottom: 14px; font-size: 12.5px; line-height: 1.6;
-}
-.star-line { margin-bottom: 6px; }
-.star-line:last-child { margin-bottom: 0; }
-.star-tag { font-weight: 700; color: #ffffff; display: inline-block; width: 68px; font-size: 11px; text-transform: uppercase; }
+/ DETAIL ROWS DALAM KARTU /
+.case-details-list { display: flex; flex-direction: column; gap: 6px; font-size: 12.5px; line-height: 1.55; margin-bottom: 12px; }
+.detail-item { display: flex; align-items: flex-start; gap: 8px; }
+.detail-label { font-weight: 700; color: #ffffff; flex-shrink: 0; min-width: 82px; font-size: 11px; text-transform: uppercase; }
+.detail-val { color: var(--text-secondary); }
 
 .case-period {
   display: flex; align-items: center; justify-content: space-between; font-size: 11px; color: var(--text-muted);
-  margin-top: auto; padding-top: 12px; border-top: 1px solid var(--border); font-family: 'JetBrains Mono', monospace;
+  margin-top: auto; padding-top: 10px; border-top: 1px solid var(--border); font-family: 'JetBrains Mono', monospace;
 }
 
-.ss-wrap { margin-top: 14px; border-radius: 10px; overflow: hidden; border: 1px solid var(--border); }
+.ss-wrap { margin-top: 12px; border-radius: 10px; overflow: hidden; border: 1px solid var(--border); }
 .ss-cap {
-  background: var(--surface-elevated); padding: 7px 12px; font-size: 10px;
+  background: var(--surface-elevated); padding: 6px 12px; font-size: 10px;
   color: var(--text-secondary); font-weight: 600; letter-spacing: 0.3px; text-transform: uppercase;
   border-bottom: 1px solid var(--border);
 }
 .ss-wrap img { width: 100%; display: block; background: #0c0d12; }
 
-/* HIGHLIGHT FEATURED CARD (TVRI & MEGA SCALE) */
+/ EXPAND BUTTON /
+.expand-btn-wrap { text-align: center; margin-top: 28px; }
+.btn-expand-cases {
+  background: var(--surface); border: 1px solid var(--border); color: #ffffff;
+  padding: 10px 24px; border-radius: 9999px; font-size: 13px; font-weight: 600;
+  cursor: pointer; transition: all 0.2s; font-family: inherit;
+}
+.btn-expand-cases:hover { border-color: var(--accent); color: var(--accent); background: rgba(0, 229, 160, 0.05); }
+
+/ BUKTI & RETENSI SECTION /
+.retention-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; margin-bottom: 32px; }
+.retention-card {
+  background: var(--surface); border: 1px solid var(--border); border-radius: 12px;
+  padding: 18px; display: flex; flex-direction: column; justify-content: space-between;
+}
+.retention-client { font-size: 15px; font-weight: 700; color: #ffffff; margin-bottom: 4px; }
+.retention-stat {
+  font-family: 'JetBrains Mono', monospace; font-size: 14px; color: var(--accent);
+  font-weight: 700; margin-top: 8px;
+}
+
 .highlight-card {
   background: linear-gradient(135deg, rgba(0, 229, 160, 0.06), rgba(56, 189, 248, 0.04));
-  border: 1px solid rgba(0, 229, 160, 0.25); border-radius: 18px; padding: 36px;
-  display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 36px; align-items: center; margin-bottom: 28px;
+  border: 1px solid rgba(0, 229, 160, 0.25); border-radius: 16px; padding: 32px;
+  display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 32px; align-items: center;
 }
 .highlight-badge {
   display: inline-flex; align-items: center; gap: 6px; background: rgba(255, 107, 53, 0.15);
   border: 1px solid rgba(255, 107, 53, 0.3); color: var(--accent-orange);
   padding: 4px 12px; border-radius: 9999px; font-size: 11px; font-weight: 700; margin-bottom: 12px;
 }
-.highlight-title { font-size: 24px; font-weight: 800; line-height: 1.25; margin-bottom: 12px; color: #ffffff; }
-.highlight-desc { font-size: 14px; color: var(--text-secondary); line-height: 1.7; margin-bottom: 20px; }
+.highlight-title { font-size: 22px; font-weight: 800; line-height: 1.25; margin-bottom: 10px; color: #ffffff; }
+.highlight-desc { font-size: 13.5px; color: var(--text-secondary); line-height: 1.7; margin-bottom: 18px; }
 .tvri-link {
   display: inline-flex; align-items: center; gap: 8px; background: var(--accent-orange);
-  color: white; padding: 9px 18px; border-radius: 9999px; font-size: 12.5px; font-weight: 700;
+  color: white; padding: 8px 16px; border-radius: 9999px; font-size: 12px; font-weight: 700;
   text-decoration: none; transition: opacity 0.2s;
 }
 .tvri-link:hover { opacity: 0.9; }
-
-.highlight-metrics { display: flex; flex-direction: column; gap: 10px; }
+.highlight-metrics { display: flex; flex-direction: column; gap: 8px; }
 .h-metric {
   display: flex; justify-content: space-between; align-items: center;
-  background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 12px 16px;
+  background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 10px 14px;
 }
-.h-metric-label { font-size: 12.5px; color: var(--text-secondary); }
-.h-metric-val { font-family: 'JetBrains Mono', monospace; font-size: 15px; font-weight: 700; color: var(--accent); }
+.h-metric-label { font-size: 12px; color: var(--text-secondary); }
+.h-metric-val { font-family: 'JetBrains Mono', monospace; font-size: 14.5px; font-weight: 700; color: var(--accent); }
 
-/* AI CREATIVE LAB SECTION */
-.ai-showcase-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 32px; align-items: center; margin-bottom: 36px; }
-.ai-preview-box {
-  background: var(--surface); border: 1px solid var(--border); border-radius: 16px;
-  overflow: hidden; position: relative;
-}
-.ai-preview-header {
-  background: var(--surface-elevated); padding: 10px 16px; font-size: 11px;
-  color: var(--text-secondary); font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase;
-  border-bottom: 1px solid var(--border); display: flex; justify-content: space-between;
-}
-.ai-preview-body { padding: 16px; }
-.ai-preview-body img { width: 100%; border-radius: 10px; display: block; border: 1px solid var(--border); }
-
-.ai-workflow-steps { display: flex; flex-direction: column; gap: 14px; }
-.ai-step-card {
-  background: var(--surface); border: 1px solid var(--border); border-radius: 12px;
-  padding: 16px 20px; display: flex; gap: 16px; align-items: flex-start;
-}
-.ai-step-num {
-  font-family: 'JetBrains Mono', monospace; font-size: 16px; font-weight: 800;
-  color: var(--accent-purple); background: rgba(168, 85, 247, 0.12);
-  width: 32px; height: 32px; border-radius: 8px; display: flex; align-items: center; justify-content: center;
-  flex-shrink: 0;
-}
-.ai-step-title { font-size: 14.5px; font-weight: 700; color: #ffffff; margin-bottom: 4px; }
-.ai-step-desc { font-size: 12.5px; color: var(--text-secondary); line-height: 1.6; }
-
-/* HOOK BREAKDOWN GALLERY */
-.hooks-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 18px; margin-top: 24px; }
-.hook-card {
+/ FRAMEWORK STRATEGI /
+.framework-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 18px; }
+.framework-card {
   background: var(--surface); border: 1px solid var(--border); border-radius: 14px;
-  padding: 20px; position: relative;
+  padding: 22px;
+}
+.framework-num {
+  font-family: 'JetBrains Mono', monospace; font-size: 11.5px; font-weight: 700;
+  color: var(--accent); margin-bottom: 6px;
+}
+.framework-title { font-size: 15px; font-weight: 700; color: #ffffff; margin-bottom: 6px; }
+.framework-desc { font-size: 12.5px; color: var(--text-secondary); line-height: 1.6; }
+
+/ EKSPERIMEN AI SECTION (LOWER PRIORITY) /
+.ai-section-box {
+  background: var(--surface); border: 1px solid var(--border); border-radius: 16px;
+  padding: 28px; margin-top: 16px;
+}
+.ai-intro { font-size: 13.5px; color: var(--text-secondary); line-height: 1.7; margin-bottom: 24px; max-width: 800px; }
+.ai-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; align-items: start; }
+.ai-col-card {
+  background: var(--surface-elevated); border: 1px solid var(--border); border-radius: 12px;
+  padding: 18px;
+}
+.ai-col-card h4 { font-size: 14px; font-weight: 700; color: #ffffff; margin-bottom: 8px; }
+.ai-col-card p { font-size: 12.5px; color: var(--text-secondary); line-height: 1.6; margin-bottom: 12px; }
+
+.hooks-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; margin-top: 20px; }
+.hook-card {
+  background: var(--surface-elevated); border: 1px solid var(--border); border-radius: 12px;
+  padding: 16px;
 }
 .hook-badge {
   font-size: 10px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase;
-  padding: 3px 8px; border-radius: 6px; display: inline-block; margin-bottom: 10px;
+  padding: 3px 8px; border-radius: 6px; display: inline-block; margin-bottom: 8px;
 }
 .hook-badge.curiosity { background: rgba(255, 107, 53, 0.15); color: var(--accent-orange); }
 .hook-badge.trend { background: rgba(168, 85, 247, 0.15); color: var(--accent-purple); }
 .hook-badge.social { background: rgba(0, 229, 160, 0.15); color: var(--accent); }
-.hook-title { font-size: 14.5px; font-weight: 700; color: #ffffff; margin-bottom: 8px; line-height: 1.4; }
+.hook-title { font-size: 13.5px; font-weight: 700; color: #ffffff; margin-bottom: 6px; line-height: 1.4; }
 .hook-metric {
-  font-family: 'JetBrains Mono', monospace; font-size: 13px; font-weight: 700;
-  color: var(--accent); margin-top: 10px; padding-top: 8px; border-top: 1px dashed var(--border);
+  font-family: 'JetBrains Mono', monospace; font-size: 12px; font-weight: 700;
+  color: var(--accent); margin-top: 8px; padding-top: 6px; border-top: 1px dashed var(--border);
 }
 
-/* SKILLS MATRIX */
-.skills-matrix { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
+/ KEAHLIAN MATRIX /
+.skills-matrix { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 18px; }
 .skill-category {
   background: var(--surface); border: 1px solid var(--border); border-radius: 14px;
-  padding: 22px;
+  padding: 20px;
 }
 .skill-cat-title {
-  font-size: 13px; font-weight: 700; color: var(--accent); letter-spacing: 0.5px;
-  text-transform: uppercase; margin-bottom: 14px; display: flex; align-items: center; gap: 8px;
+  font-size: 12.5px; font-weight: 700; color: var(--accent); letter-spacing: 0.5px;
+  text-transform: uppercase; margin-bottom: 12px; display: flex; align-items: center; gap: 8px;
 }
-.skill-pill-wrap { display: flex; flex-wrap: wrap; gap: 8px; }
+.skill-pill-wrap { display: flex; flex-wrap: wrap; gap: 7px; }
 .skill-pill {
   background: var(--surface-elevated); border: 1px solid var(--border); color: #ffffff;
-  padding: 5px 12px; border-radius: 8px; font-size: 12px; font-weight: 500;
+  padding: 5px 11px; border-radius: 8px; font-size: 12px; font-weight: 500;
 }
 
-/* TRACK RECORD & AGENSI */
-.agency-card {
-  background: linear-gradient(135deg, rgba(22, 27, 38, 0.9), rgba(17, 20, 29, 0.9));
-  border: 1px solid var(--border); border-radius: 16px; padding: 28px;
-  margin-top: 24px; display: grid; grid-template-columns: 1fr 1fr; gap: 24px;
-}
-.record-item h4 { font-size: 15px; font-weight: 700; color: #ffffff; margin-bottom: 6px; }
-.record-item p { font-size: 13px; color: var(--text-secondary); line-height: 1.6; }
-
-/* CTA HIRING */
+/ CTA PENUTUP (HIRING FOCUS) /
 .cta-banner {
-  background: linear-gradient(135deg, rgba(0, 229, 160, 0.12), rgba(56, 189, 248, 0.08), rgba(168, 85, 247, 0.08));
-  border: 1px solid rgba(0, 229, 160, 0.3); border-radius: 18px; padding: 48px 32px;
+  background: linear-gradient(135deg, rgba(0, 229, 160, 0.1), rgba(56, 189, 248, 0.06));
+  border: 1px solid rgba(0, 229, 160, 0.25); border-radius: 18px; padding: 44px 28px;
   text-align: center; margin-top: 40px;
 }
-.cta-banner h3 { font-size: 26px; font-weight: 800; margin-bottom: 12px; color: #ffffff; }
-.cta-banner p { font-size: 14.5px; color: var(--text-secondary); max-width: 580px; margin: 0 auto 28px; line-height: 1.7; }
+.cta-banner h3 { font-size: 24px; font-weight: 800; margin-bottom: 10px; color: #ffffff; }
+.cta-banner p { font-size: 14px; color: var(--text-secondary); max-width: 580px; margin: 0 auto 24px; line-height: 1.65; }
 
-/* FOOTER */
+/ FOOTER /
 footer {
-  padding: 40px 48px; border-top: 1px solid var(--border);
+  padding: 36px 48px; border-top: 1px solid var(--border);
   display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;
   max-width: 1240px; margin: 0 auto;
 }
-.footer-name { font-weight: 800; font-size: 16px; color: var(--accent); }
-.footer-links { display: flex; gap: 20px; }
-.footer-links a { color: var(--text-muted); text-decoration: none; font-size: 13px; font-weight: 500; transition: color 0.2s; }
+.footer-name { font-weight: 800; font-size: 15px; color: var(--accent); }
+.footer-links { display: flex; gap: 18px; }
+.footer-links a { color: var(--text-muted); text-decoration: none; font-size: 12.5px; font-weight: 500; transition: color 0.2s; }
 .footer-links a:hover { color: var(--accent); }
 
 @media (max-width: 900px) {
   nav { padding: 14px 20px; }
   .nav-links { display: none; }
-  .hero { grid-template-columns: 1fr; padding: 100px 20px 60px; text-align: center; gap: 36px; }
+  .hero { grid-template-columns: 1fr; padding: 95px 20px 50px; text-align: center; gap: 32px; }
   .hero-photo { order: -1; }
-  .hero-photo img { max-width: 240px; }
-  .hero-stats { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+  .hero-photo img { max-width: 220px; }
+  .hero-stats { grid-template-columns: repeat(2, 1fr); gap: 8px; }
   .hero-cta-group, .hero-contacts { justify-content: center; }
-  section { padding: 60px 20px; }
-  .highlight-card, .ai-showcase-grid, .agency-card { grid-template-columns: 1fr; padding: 24px; }
-  footer { padding: 28px 20px; flex-direction: column; text-align: center; }
+  section { padding: 55px 20px; }
+  .highlight-card, .ai-cols { grid-template-columns: 1fr; padding: 22px; }
+  footer { padding: 24px 20px; flex-direction: column; text-align: center; }
 }
-
-/* ADDITIONS */
-.case-card.featured { grid-column: 1 / -1; display: grid; grid-template-columns: 1fr 1fr; gap: 0 32px; align-items: start; }
-.case-card.featured > .ss-wrap { grid-column: 2; grid-row: 1 / span 6; margin-top: 0; align-self: center; }
-.case-card.featured > :not(.ss-wrap) { grid-column: 1; }
-.sub-title { font-size: 20px; font-weight: 800; color: #fff; margin: 8px 0 18px; }
-.testi-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
-.testi-card { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; overflow: hidden; }
-.testi-card img { width: 100%; display: block; }
-.testi-card figcaption { padding: 12px 16px; font-size: 12.5px; color: var(--text-secondary); font-weight: 600; border-top: 1px solid var(--border); }
-.ai-duo { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 28px; }
-.ai-cap { font-size: 12px; color: var(--text-muted); margin-top: 10px; }
-.ai-showcase-grid { align-items: start; }
-.hustle-card { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 36px; align-items: center; background: var(--surface); border: 1px solid var(--border); border-radius: 18px; padding: 36px; }
-.hustle-period { font-size: 13px; color: var(--text-muted); margin-bottom: 8px; font-family: 'JetBrains Mono', monospace; }
-.hustle-title { font-size: 21px; font-weight: 800; color: #fff; margin-bottom: 12px; line-height: 1.3; }
-.hustle-desc { font-size: 14px; color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px; }
-.hustle-tags { display: flex; flex-wrap: wrap; gap: 8px; }
-.hustle-note { font-size: 12px; color: var(--text-muted); margin-top: 12px; }
-.hustle-metrics { display: flex; flex-direction: column; gap: 10px; }
-.zoomable { cursor: zoom-in; }
-#lightbox { position: fixed; inset: 0; background: rgba(0,0,0,.92); display: none; align-items: center; justify-content: center; z-index: 200; padding: 20px; cursor: zoom-out; }
-#lightbox.open { display: flex; }
-#lightbox img { max-width: 100%; max-height: 100%; border-radius: 8px; }
-@media (max-width: 900px) {
-  .case-card.featured { display: flex; }
-  .ai-duo, .hustle-card { grid-template-columns: 1fr; padding: 0; }
-  .hustle-card { padding: 24px; }
-  .cases-grid { grid-template-columns: 1fr; }
-}
+.zoomable{cursor:zoom-in}
+#lightbox{position:fixed;inset:0;background:rgba(0,0,0,.92);display:none;align-items:center;justify-content:center;z-index:200;padding:20px;cursor:zoom-out}
+#lightbox.open{display:flex}
+#lightbox img{max-width:100%;max-height:100%;border-radius:8px}
+@media (max-width:900px){.cases-grid{grid-template-columns:1fr}.stat-num{font-size:16px}}
 </style>
 </head>
 
@@ -435,40 +452,46 @@ footer {
 <nav>
   <a href="#" class="nav-logo">AFR.</a>
   <ul class="nav-links">
-    <li><a href="#showcase">Studi Kasus</a></li>
-    <li><a href="#bukti">Testimoni</a></li>
-    <li><a href="#creative-lab">AI Lab</a></li>
-    <li><a href="#sidehustle">Side Hustle</a></li>
+    <li><a href="#pengalaman">Pengalaman</a></li>
+    <li><a href="#studi-kasus">Studi Kasus</a></li>
+    <li><a href="#bukti-retensi">Bukti &amp; Retensi</a></li>
     <li><a href="#framework">Framework</a></li>
-    <li><a href="#skills">Keahlian</a></li>
+    <li><a href="#keahlian">Keahlian</a></li>
+    <li><a href="#eksperimen-ai">Eksperimen AI</a></li>
   </ul>
   <div class="nav-actions">
-    <!-- Link file PDF CV Anda -->
     <a href="CV_Andri_Faisal_Rahman.pdf" target="_blank" download class="btn-nav-cv">📄 Unduh CV</a>
-    <a href="https://wa.me/6282374381250?text=Halo%20Andri%20Faisal,%20saya%20tertarik%20dengan%20portofolio%20Digital%20Ads%20Anda" target="_blank" class="btn-nav-cta">💬 WhatsApp</a>
   </div>
 </nav>
 
 <!-- HERO -->
 <section class="hero">
   <div class="hero-content">
-    <div class="hero-badge">Terbuka untuk Peluang Full-Time / Project-Based</div>
+    <div class="hero-badge">Open to Work — Digital Ads Specialist (Full-Time / Remote)</div>
     <h1 class="hero-name">Andri Faisal<br><span>Rahman</span></h1>
-    <p class="hero-title">Senior Digital Ads &amp; Growth Specialist | TikTok GMV Max • Shopee Ads • Meta Ads</p>
+    <p class="hero-title">Digital Ads Specialist | TikTok GMV Max • Shopee Ads • Meta Ads</p>
     <p class="hero-tagline">
-      Spesialis periklanan berbayar dengan <strong>4+ tahun pengalaman</strong> mengakselerasi pertumbuhan omzet bisnis e-commerce dan perbankan. Terbukti mengelola <strong>Rp500 Juta+ ad spend</strong>, menghasilkan <strong>Rp3,6 Miliar+ GMV</strong> dan memfasilitasi <strong>estimasi Rp5 Miliar+ penyaluran kredit</strong> via pendekatan data-driven dan otomatisasi materi iklan berbantuan AI.
+      Digital Ads Specialist dengan <strong>4+ tahun pengalaman</strong> mengelola periklanan berbayar dari setup awal, penentuan struktur kampanye, kontrol budget harian, bidding, hingga scaling terukur (ROI/ROAS). Terbiasa mengelola multi-akun dengan akumulasi ad spend ratusan juta rupiah serta menjaga akurasi tracking konversi secara data-driven.
     </p>
 
+    <!-- HIERARKI CTA MELAMAR KERJA -->
     <div class="hero-cta-group">
-      <a href="https://wa.me/6282374381250?text=Halo%20Andri%20Faisal,%20kami%20ingin%20diskusi%20tentang%20scaling%20iklan" target="_blank" class="btn-primary">
+      <a href="CV_Andri_Faisal_Rahman.pdf" target="_blank" download class="btn-primary">
+        📄 Unduh CV (PDF)
+      </a>
+      <a href="https://wa.me/6282374381250?text=Halo%20Andri%20Faisal,%20kami%20tertarik%20dengan%20profil%20Anda%20sebagai%20Digital%20Ads%20Specialist" target="_blank" class="btn-secondary">
         💬 Hubungi via WhatsApp
       </a>
-      <a href="CV_Andri_Faisal_Rahman.pdf" target="_blank" download class="btn-secondary">
-        📄 Download Resume / CV (PDF)
+      <a href="mailto:andrifaisalrahmans@gmail.com" class="btn-secondary">
+        ✉️ Email
       </a>
     </div>
 
     <div class="hero-contacts">
+      <a href="https://linkedin.com/in/andrifaisalrahman" target="_blank" class="contact-chip linkedin-highlight">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+        <strong>LinkedIn: in/andrifaisalrahman</strong>
+      </a>
       <a href="tel:082374381250" class="contact-chip">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8 19.79 19.79 0 01.01 1.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
         082374381250
@@ -477,28 +500,24 @@ footer {
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,12 2,6"/></svg>
         andrifaisalrahmans@gmail.com
       </a>
-      <a href="https://linkedin.com/in/andrifaisalrahman" target="_blank" class="contact-chip">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
-        LinkedIn Profile
-      </a>
     </div>
 
-    <!-- 4 BESAR PENCAPAIAN TERVERIFIKASI -->
+    <!-- 4 GRAND STATS -->
     <div class="hero-stats">
       <div class="stat">
-        <div class="stat-num orange">Rp3.6M+</div>
+        <div class="stat-num orange">Rp3,6 Miliar+</div>
         <div class="stat-label">Akumulasi GMV</div>
       </div>
       <div class="stat">
         <div class="stat-num blue">Est. Rp5 Miliar+</div>
-        <div class="stat-label">Penyaluran Kredit</div>
+        <div class="stat-label">Penyaluran Kredit (estimasi)</div>
       </div>
       <div class="stat">
         <div class="stat-num">40.000+</div>
         <div class="stat-label">Pesanan &amp; Leads</div>
       </div>
       <div class="stat">
-        <div class="stat-num purple">4+ Thn</div>
+        <div class="stat-num purple">4+ Tahun</div>
         <div class="stat-label">Pengalaman Ads</div>
       </div>
     </div>
@@ -511,65 +530,155 @@ footer {
   </div>
 </section>
 
-<!-- STUDI KASUS & SHOWCASE -->
-<section id="showcase">
-  <div class="section-label">Studi Kasus &amp; Bukti Kinerja</div>
-  <h2 class="section-title">Hasil Riil Skalasi Multi-Platform:<br>E-Commerce, Marketplace &amp; Jasa Keuangan</h2>
+<!-- SECTION 1: PENGALAMAN KERJA -->
+<section id="pengalaman">
+  <div class="section-label">Rekam Jejak Profesional</div>
+  <h2 class="section-title">Pengalaman Kerja &amp; Kapasitas Manajemen Iklan</h2>
 
-  <!-- Filter Buttons -->
-  <div class="filter-tabs">
-    <button class="filter-tab active" onclick="filterCases('all', this)">Semua Kanal</button>
-    <button class="filter-tab" onclick="filterCases('omnichannel', this)">Omnichannel (Shopee + TikTok)</button>
-    <button class="filter-tab" onclick="filterCases('tiktok', this)">TikTok GMV Max</button>
-    <button class="filter-tab" onclick="filterCases('shopee', this)">Shopee Ads</button>
-    <button class="filter-tab" onclick="filterCases('meta', this)">Meta Ads (CTWA &amp; Lead Gen)</button>
+  <div class="timeline">
+    <!-- JAWARA DIGITAL AGENCY -->
+    <div class="timeline-item">
+      <div class="timeline-header">
+        <div>
+          <div class="timeline-role">Digital Ads Specialist</div>
+          <div class="timeline-company">Jawara Digital Agency (PT Dua Jawara Indonesia), Jakarta</div>
+        </div>
+        <div class="timeline-period">Agustus 2025 – Juni 2026</div>
+      </div>
+      <p class="timeline-desc">
+        Bertanggung jawab penuh atas pengelolaan iklan performa berbayar lintas platform (Meta Ads, TikTok GMV Max, Shopee Ads) dengan kapasitas skala agensi:
+      </p>
+      <ul class="timeline-bullets">
+        <li>Mengelola hingga <strong>25 klien aktif per bulan</strong> secara simultan di sektor F&amp;B, properti, dan jasa keuangan.</li>
+        <li>Mengawasi akumulasi budget iklan <strong>Rp75 Juta+ per bulan</strong> (Rp3–5 Juta per klien) dengan akuntabilitas laporan performa berkala.</li>
+        <li>Menaikkan ROAS klien TikTok GMV Max dari 5x menjadi 8x dalam 3 bulan (budget ~Rp10 Juta/bulan) melalui A/B testing kreatif, segmentasi audiens, dan optimasi struktur kampanye.</li>
+      </ul>
+    </div>
+
+    <!-- WORKSHOP TECHNICAL ASSISTANT -->
+    <div class="timeline-item">
+      <div class="timeline-header">
+        <div>
+          <div class="timeline-role">Workshop Technical Assistant (Paruh Waktu)</div>
+          <div class="timeline-company">Kelas Jawara, Jakarta</div>
+        </div>
+        <div class="timeline-period">Januari 2025 – Maret 2026</div>
+      </div>
+      <ul class="timeline-bullets">
+        <li>Mendampingi <strong>20–50 peserta per sesi</strong> (UMKM, profesional korporat, career switcher) dalam praktik langsung setup Meta Ads Manager, TikTok Shop Ads, dan integrasi pixel.</li>
+        <li>Menyelesaikan kendala teknis peserta secara real-time: audit akun iklan, penolakan materi iklan, integrasi katalog, dan tracking event konversi.</li>
+      </ul>
+      <!-- DOKUMENTASI WORKSHOP & ASISTENSI TEKNIS -->
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px; margin-top: 16px;">
+        <div class="ss-wrap" style="margin-top: 0;">
+          <div class="ss-cap">📷 Sesi Praktik Langsung Meta Ads Manager</div>
+          <img loading="lazy" class="zoomable" src="assets/img/workshop-meta-ads-1.jpg" alt="Sesi Workshop Meta Ads" style="aspect-ratio: 4/3; object-fit: cover;">
+        </div>
+        <div class="ss-wrap" style="margin-top: 0;">
+          <div class="ss-cap">📷 Asistensi Setup &amp; Troubleshooting Akun Iklan</div>
+          <img loading="lazy" class="zoomable" src="assets/img/workshop-meta-ads-2.jpg" alt="Pendampingan Peserta Kelas Jawara" style="aspect-ratio: 4/3; object-fit: cover;">
+        </div>
+      </div>
+    </div>
+
+    <!-- FREELANCE -->
+    <div class="timeline-item">
+      <div class="timeline-header">
+        <div>
+          <div class="timeline-role">Freelance Digital Ads Specialist</div>
+          <div class="timeline-company">Klien Mandiri (Multi-Industri)</div>
+        </div>
+        <div class="timeline-period">Januari 2022 – Sekarang</div>
+      </div>
+      <ul class="timeline-bullets">
+        <li>Mengelola kampanye Meta Ads (CTWA, LPWA, lead generation), TikTok GMV Max, dan Shopee Ads untuk rata-rata 5 klien aktif per bulan di sektor F&amp;B, properti, jasa keuangan, dan e-commerce.</li>
+        <li>Menjaga efisiensi cost per lead Rp5.000–8.000 pada kampanye lead generation Meta Ads.</li>
+      </ul>
+    </div>
+
+    <!-- LATAR BELAKANG KEMKOMDIGI -->
+    <div class="timeline-item">
+      <div class="timeline-header">
+        <div>
+          <div class="timeline-role">Staf Layanan &amp; Konsultasi Korporat (5+ Tahun Penugasan)</div>
+          <div class="timeline-company">Kementerian Komunikasi dan Digital RI (Kemkomdigi), Jakarta</div>
+        </div>
+        <div class="timeline-period">2019 – 2024</div>
+      </div>
+      <p class="timeline-desc" style="font-size:13px;">
+        Pengalaman 5+ tahun dalam komunikasi regulasi dan perizinan korporat B2B (Telkomsel, JNE, MyRepublic) serta manajemen aduan publik (BRTI/159). Meraih <strong>2x predikat Best Agent</strong> sebagai bukti ketelitian administrasi, manajemen SLA, dan kualitas komunikasi profesional.
+      </p>
+    </div>
   </div>
 
-  <div class="cases-grid" id="caseGrid">
+  <!-- INISIATIF MANDIRI -->
+  <div class="inisiatif-box">
+    <div class="inisiatif-title">Inisiatif Mandiri (2022 – 2024): Uji Coba Media Buying Berbasis Modal Sendiri</div>
+    <div class="inisiatif-text">
+      Membuktikan pemahaman media buying dari modal sendiri dengan memasarkan produk fisik (dompet, korset, parfum, herbal) via Meta Ads CTWA dan LPWA. Menghasilkan omzet Rp20 Juta+ dalam 4–5 bulan secara konsisten di sela pekerjaan penuh waktu, memperkuat pemahaman mendalam tentang cash flow dan risiko bisnis pemilik brand.
+    </div>
+  </div>
+</section>
 
-    <!-- CASE 1: MEGA SCALE - NURIL SHOES (TIKTOK GMV MAX) -->
-    <div class="case-card featured" data-category="tiktok">
+<!-- SECTION 2: STUDI KASUS -->
+<section id="studi-kasus">
+  <div class="section-label">Studi Kasus Terverifikasi</div>
+  <h2 class="section-title">Hasil Pengelolaan Kampanye &amp; Optimasi Iklan</h2>
+
+  <!-- TOP 3 STUDI KASUS UTAMA (ALWAYS VISIBLE) -->
+  <div class="cases-grid">
+
+    <!-- CASE 1: NURIL SHOES -->
+    <div class="case-card">
       <div class="case-badge-row">
         <span class="case-platform tiktok">● TikTok GMV Max</span>
-        <span class="case-industry">Fashion Footwear (Heels)</span>
       </div>
       <h3 class="case-title">Skalasi 1 Tahun: Menghasilkan Rp1,77 Miliar GMV dengan 11.860 Pesanan</h3>
       <div class="metrics-row">
         <div class="metric"><span class="metric-val">7.37x</span><div class="metric-key">ROI Konsisten</div></div>
-        <div class="metric"><span class="metric-val orange">Rp1,77 M</span><div class="metric-key">Gross GMV</div></div>
+        <div class="metric"><span class="metric-val orange">Rp1,77 Miliar</span><div class="metric-key">Gross GMV</div></div>
         <div class="metric"><span class="metric-val">11.860</span><div class="metric-key">SKU Orders</div></div>
       </div>
-      <div class="star-box">
-        <div class="star-line"><span class="star-tag">Problem:</span> Biaya akuisisi fashion wanita fluktuatif dan cepat mengalami creative fatigue.</div>
-        <div class="star-line"><span class="star-tag">Action:</span> Skalasi masif via Affiliate Mass Authorization (3.478 video terotorisasi) + bidding CPO ketat (Rp20.298/order).</div>
-        <div class="star-line"><span class="star-tag">Result:</span> Top kreator menghasilkan Rp127 Juta GMV per single video, total omzet Rp1,77 Miliar sepanjang tahun.</div>
+      <div class="case-details-list">
+        <div class="detail-item">
+          <span class="detail-label">Problem:</span>
+          <span class="detail-val">Biaya akuisisi fashion wanita fluktuatif dan cepat mengalami creative fatigue pada audiens jenuh.</span>
+        </div>
+        <div class="detail-item">
+          <span class="detail-label">Peran Saya:</span>
+          <span class="detail-val">Mengelola struktur kampanye GMV Max, alokasi budget, penguncian target CPO (Rp20.298/order), optimasi bidding, dan kurasi matriks 3.478 video kreator afiliasi mass-authorization. (Catatan: Rp127 Juta GMV per single video merupakan hasil kreator afiliasi yang didorong skala iklannya, bukan produksi video saya).</span>
+        </div>
       </div>
       <div class="case-period">
-        <span>📅 Okt 2025 – Okt 2026 (1 Tahun)</span>
-        <span>Spend: Rp240,7 Juta</span>
+        <span>📅 Okt 2025 – Okt 2026</span>
+        <span>Ad Spend: Rp240,7 Juta</span>
       </div>
       <div class="ss-wrap">
-        <div class="ss-cap">📊 Dashboard TikTok GMV Max — Nuril Shoes (Rp1,77M GMV)</div>
+        <div class="ss-cap">📊 Dashboard TikTok GMV Max — Nuril Shoes (Rp1,77 Miliar GMV)</div>
         <img loading="lazy" class="zoomable" src="assets/img/tiktok-nuril-shoes.webp" alt="TikTok Ads Nuril Shoes">
       </div>
     </div>
 
-    <!-- CASE 2: OMNICHANNEL - SPECIALTY COFFEE (SHOPEE + TIKTOK) -->
-    <div class="case-card" data-category="omnichannel shopee tiktok">
+    <!-- CASE 2: SPECIALTY COFFEE BEANS -->
+    <div class="case-card">
       <div class="case-badge-row">
         <span class="case-platform omni">● Sinergi Omnichannel</span>
-        <span class="case-industry">F&amp;B Specialty Coffee Beans</span>
       </div>
       <h3 class="case-title">Pertumbuhan 90 Hari: Rp765 Juta Omzet via Shopee Ads &amp; TikTok GMV Max</h3>
       <div class="metrics-row">
         <div class="metric"><span class="metric-val">7.95x</span><div class="metric-key">Blended ROAS</div></div>
-        <div class="metric"><span class="metric-val orange">Rp765 Jt</span><div class="metric-key">Omzet Gabungan</div></div>
+        <div class="metric"><span class="metric-val orange">Rp765 Juta</span><div class="metric-key">Omzet Gabungan</div></div>
         <div class="metric"><span class="metric-val">6.210</span><div class="metric-key">Total Pesanan</div></div>
       </div>
-      <div class="star-box">
-        <div class="star-line"><span class="star-tag">Problem:</span> Edukasi biji kopi specialty membutuhkan kombinasi visual penemuan produk &amp; kemudahan checkout.</div>
-        <div class="star-line"><span class="star-tag">Action:</span> Sinergi TikTok (1.100+ video afiliasi edukasi seduh) + Bidding 2-Tahap Shopee (Auto learning → Target ROAS).</div>
-        <div class="star-line"><span class="star-tag">Result:</span> TikTok menghasilkan Rp510jt (ROI 7.92x) dan Shopee Rp255jt (ROAS 8.01x) dalam 90 hari bersamaan.</div>
+      <div class="case-details-list">
+        <div class="detail-item">
+          <span class="detail-label">Problem:</span>
+          <span class="detail-val">Kategori biji kopi specialty membutuhkan sinergi antara penemuan produk di TikTok dan repeat order di Shopee.</span>
+        </div>
+        <div class="detail-item">
+          <span class="detail-label">Peran Saya:</span>
+          <span class="detail-val">Merancang alokasi budget lintas kanal, setup Bidding 2-Tahap di Shopee (Tahap 1 Auto learning → Tahap 2 Target ROAS), serta monitoring kestabilan CPO di TikTok GMV Max.</span>
+        </div>
       </div>
       <div class="case-period">
         <span>📅 Jul – Okt 2026 (90 Hari)</span>
@@ -581,156 +690,207 @@ footer {
       </div>
     </div>
 
-    <!-- CASE 3: FINANCIAL SERVICES - BPR KS TASIKMALAYA -->
-    <div class="case-card" data-category="meta">
+    <!-- CASE 3: BPR KS TASIKMALAYA -->
+    <div class="case-card">
       <div class="case-badge-row">
         <span class="case-platform meta">● Meta Ads CTWA &amp; LPWA</span>
-        <span class="case-industry">Jasa Keuangan (Gadai BPKB)</span>
       </div>
-      <h3 class="case-title">Penyaluran Kredit: 9.719 Leads WhatsApp &amp; Estimasi Rp5 Miliar+ Pencairan</h3>
+      <h3 class="case-title">Jasa Keuangan: 9.719 Leads WhatsApp &amp; Est. Rp5 Miliar+ Penyaluran Kredit</h3>
       <div class="metrics-row">
         <div class="metric"><span class="metric-val">9.719</span><div class="metric-key">Leads WA Baru</div></div>
         <div class="metric"><span class="metric-val blue">5,8 Juta</span><div class="metric-key">Jangkauan Warga</div></div>
         <div class="metric"><span class="metric-val">Rp11.475</span><div class="metric-key">Avg Cost/Lead</div></div>
       </div>
-      <div class="star-box">
-        <div class="star-line"><span class="star-tag">Problem:</span> Memerlukan calon nasabah pinjaman gadai BPKB yang qualified dengan verifikasi surat kendaraan valid.</div>
-        <div class="star-line"><span class="star-tag">Action:</span> 194 Kampanye CTWA &amp; LPWA tersegmen radius kantor cabang Tasikmalaya, Bandung, Garut &amp; Ciamis.</div>
-        <div class="star-line"><span class="star-tag">Result:</span> Menggerakkan estimasi 380–480 akad pencairan kredit mikro dengan CAC sangat efisien (~Rp275rb/cair).</div>
+      <div class="case-details-list">
+        <div class="detail-item">
+          <span class="detail-label">Problem:</span>
+          <span class="detail-val">Dibutuhkan leads calon debitur pinjaman gadai BPKB yang berdomisili sesuai jangkauan kantor cabang.</span>
+        </div>
+        <div class="detail-item">
+          <span class="detail-label">Peran Saya:</span>
+          <span class="detail-val">Mengelola 194 kampanye Meta Ads (CTWA &amp; LPWA Scalev), penargetan geografis presisi (Tasikmalaya, Garut, Ciamis, Bandung), kontrol CPL harian (banyak kampanye terkunci di Rp5.000–8.000), dan pelaporan ke tim sales.</span>
+        </div>
+        <div class="detail-item">
+          <span class="detail-label">Hasil Bisnis:</span>
+          <span class="detail-val">Estimasi 380–480 akad pencairan kredit mikro (estimasi berdasarkan data closing dari klien dengan conversion rate 3.5%–5% standar industri gadai BPKB) dengan estimasi total disbursement Rp4,5 – Rp6 Miliar.</span>
+        </div>
       </div>
       <div class="case-period">
-        <span>📅 194 Kampanye Iklan</span>
-        <span>Spend: Rp111,5 Juta</span>
+        <span>📅 194 Kampanye Meta</span>
+        <span>Ad Spend: Rp111,5 Juta</span>
       </div>
       <div class="ss-wrap">
-        <div class="ss-cap">📊 Dashboard Meta Ads Manager — Akun BA Zahwa BPRKS</div>
+        <div class="ss-cap">📊 Dashboard Meta Ads — Akun BA Zahwa BPRKS (Rp111 Juta Spend)</div>
         <img loading="lazy" class="zoomable" src="assets/img/meta-bprks-tasik.webp" alt="Meta Ads BPRKS">
-      </div>
-    </div>
-
-    <!-- CASE 4: TIKTOK LIVE SHOPPING ADS (FASHION HIGH ROAS) -->
-    <div class="case-card" data-category="tiktok">
-      <div class="case-badge-row">
-        <span class="case-platform tiktok">● TikTok Live Ads</span>
-        <span class="case-industry">Produk Fashion (High-Scale)</span>
-      </div>
-      <h3 class="case-title">ROAS 97x • Rp688 Juta GMV via Optimasi Live Shopping Ads</h3>
-      <div class="metrics-row">
-        <div class="metric"><span class="metric-val">97.69x</span><div class="metric-key">Puncak ROAS</div></div>
-        <div class="metric"><span class="metric-val orange">Rp688 Jt</span><div class="metric-key">Total GMV</div></div>
-        <div class="metric"><span class="metric-val">2.208</span><div class="metric-key">Pembelian</div></div>
-      </div>
-      <div class="star-box">
-        <div class="star-line"><span class="star-tag">Problem:</span> Trafik organik live streaming menurun dan konversi audiens dingin lambat.</div>
-        <div class="star-line"><span class="star-tag">Action:</span> Skalasi 11 kampanye Live Shopping Ads dengan real-time dynamic bidding pada jam-jam golden hour.</div>
-        <div class="star-line"><span class="star-tag">Result:</span> Campaign puncak tembus Rp431jt GMV dari 1.409 pesanan dengan efisiensi ad spend maksimal.</div>
-      </div>
-      <div class="case-period">
-        <span>📅 Okt 2025 – Apr 2026</span>
-        <span>Ad Spend: ~Rp7 Juta</span>
-      </div>
-      <div class="ss-wrap">
-        <div class="ss-cap">📊 Dashboard TikTok Live Shopping Ads</div>
-        <img loading="lazy" class="zoomable" src="assets/img/tiktok-live-fashion.webp" alt="TikTok Live Ads">
-      </div>
-    </div>
-
-    <!-- CASE 5: PROPERTY LEAD GEN (GOLDEN NEST & GRAND NUSA INDAH) -->
-    <div class="case-card" data-category="meta">
-      <div class="case-badge-row">
-        <span class="case-platform meta">● Meta Ads CTWA</span>
-        <span class="case-industry">Properti &amp; Real Estate</span>
-      </div>
-      <h3 class="case-title">2.290+ Leads WhatsApp Prospek Rumah Komersil &amp; Subsidi</h3>
-      <div class="metrics-row">
-        <div class="metric"><span class="metric-val">2.291</span><div class="metric-key">Total Leads WA</div></div>
-        <div class="metric"><span class="metric-val blue">219K</span><div class="metric-key">Jangkauan</div></div>
-        <div class="metric"><span class="metric-val">33</span><div class="metric-key">Kampanye</div></div>
-      </div>
-      <div class="star-box">
-        <div class="star-line"><span class="star-tag">Problem:</span> Biaya per lead properti di agensi seringkali melambung di atas Rp30.000/lead.</div>
-        <div class="star-line"><span class="star-tag">Action:</span> Uji coba angle simulasi angsuran KPR bulanan + penargetan pasangan muda yang siap akad.</div>
-        <div class="star-line"><span class="star-tag">Result:</span> Grand Nusa Indah tembus 1.790 leads (spend Rp10jt) dan Golden Nest 501 leads (spend Rp2,6jt).</div>
-      </div>
-      <div class="case-period">
-        <span>📅 Jan 2025 – Apr 2026</span>
-        <span>Spend: Rp12,6 Juta</span>
-      </div>
-      <div class="ss-wrap">
-        <div class="ss-cap">📊 Dashboard Meta Ads — Klien Properti</div>
-        <img loading="lazy" class="zoomable" src="assets/img/meta-properti-leads.webp" alt="Meta Ads Properti">
-      </div>
-    </div>
-
-    <!-- CASE 6: CUSTOM & PERCETAKAN (TIKTOK GMV MAX) -->
-    <div class="case-card" data-category="tiktok">
-      <div class="case-badge-row">
-        <span class="case-platform tiktok">● TikTok GMV Max</span>
-        <span class="case-industry">Produk Custom &amp; Percetakan</span>
-      </div>
-      <h3 class="case-title">Volume Penjualan Tinggi: 7.964 Pesanan &amp; Rp236 Juta Revenue</h3>
-      <div class="metrics-row">
-        <div class="metric"><span class="metric-val">7.09x</span><div class="metric-key">ROI</div></div>
-        <div class="metric"><span class="metric-val orange">Rp236 Jt</span><div class="metric-key">Revenue</div></div>
-        <div class="metric"><span class="metric-val">7.964</span><div class="metric-key">Pesanan</div></div>
-      </div>
-      <div class="star-box">
-        <div class="star-line"><span class="star-tag">Problem:</span> Produk custom butuh volume order tinggi untuk mencapai skala margin produksi yang ekonomis.</div>
-        <div class="star-line"><span class="star-tag">Action:</span> Kampanye GMV Max jangka panjang berfokus pada winning creative video unboxing dan hasil cetak.</div>
-        <div class="star-line"><span class="star-tag">Result:</span> Pertumbuhan pesanan +33% dibanding periode sebelumnya secara stabil.</div>
-      </div>
-      <div class="case-period">
-        <span>📅 Jan – Apr 2026</span>
-        <span>Spend: Rp33,3 Juta</span>
-      </div>
-      <div class="ss-wrap">
-        <div class="ss-cap">📊 Dashboard TikTok GMV Max — Produk Custom</div>
-        <img loading="lazy" class="zoomable" src="assets/img/tiktok-custom-print.webp" alt="TikTok Custom Print">
-      </div>
-    </div>
-
-    <!-- CASE 7: OTOMOTIF -->
-    <div class="case-card" data-category="tiktok">
-      <div class="case-badge-row">
-        <span class="case-platform tiktok">● TikTok GMV Max</span>
-        <span class="case-industry">Aksesoris Otomotif</span>
-      </div>
-      <h3 class="case-title">ROI 31x dalam 3 Bulan dengan Budget Hanya Rp5,7 Juta</h3>
-      <div class="metrics-row">
-        <div class="metric"><span class="metric-val">31.67x</span><div class="metric-key">ROI</div></div>
-        <div class="metric"><span class="metric-val orange">Rp181 Jt</span><div class="metric-key">Revenue</div></div>
-        <div class="metric"><span class="metric-val">565</span><div class="metric-key">Pesanan</div></div>
-      </div>
-      <div class="star-box">
-        <div class="star-line"><span class="star-tag">Action:</span> Kampanye GMV Max untuk klien aksesoris otomotif dengan budget terkontrol.</div>
-        <div class="star-line"><span class="star-tag">Result:</span> Budget Rp5,7 Juta menghasilkan revenue Rp181 Juta, ROI konsisten sepanjang 3 bulan.</div>
-      </div>
-      <div class="case-period">
-        <span>📅 Jan – Mar 2026</span>
-        <span>Spend: Rp5,7 Juta</span>
-      </div>
-      <div class="ss-wrap">
-        <div class="ss-cap">📊 Dashboard TikTok GMV Max — Aksesoris Otomotif</div>
-        <img loading="lazy" class="zoomable" src="assets/img/tiktok-automotive.webp" alt="TikTok GMV Max Otomotif">
       </div>
     </div>
 
   </div>
 
+  <!-- EXPANDABLE EXTRA CASE STUDIES CONTAINER -->
+  <div id="extraCasesContainer" style="display: none; margin-top: 24px;">
+    <div class="cases-grid">
+
+      <!-- CASE 4: TIKTOK LIVE SHOPPING ADS -->
+      <div class="case-card">
+        <div class="case-badge-row">
+          <span class="case-platform tiktok">● TikTok Live Ads</span>
+        </div>
+        <h3 class="case-title">Fashion Live Ads: ROAS 97x Puncak • Rp688 Juta Total GMV</h3>
+        <div class="metrics-row">
+          <div class="metric"><span class="metric-val">97.69x</span><div class="metric-key">Puncak ROAS</div></div>
+          <div class="metric"><span class="metric-val orange">Rp688 Juta</span><div class="metric-key">Total GMV</div></div>
+          <div class="metric"><span class="metric-val">2.208</span><div class="metric-key">Pembelian</div></div>
+        </div>
+        <div class="case-details-list">
+          <div class="detail-item">
+            <span class="detail-label">Konteks ROAS:</span>
+            <span class="detail-val">Angka ROAS 97x merupakan performa puncak dari kampanye live tertentu, sedangkan total GMV Rp688 Juta berasal dari akumulasi 11 kampanye.</span>
+          </div>
+          <div class="detail-item">
+            <span class="detail-label">Peran Saya:</span>
+            <span class="detail-val">Setup 11 kampanye Live Shopping Ads, optimasi real-time bidding pada jam golden hour live streaming, dan evaluasi retensi penonton live.</span>
+          </div>
+        </div>
+        <div class="case-period">
+          <span>📅 Okt 2025 – Apr 2026</span>
+          <span>Ad Spend: ~Rp7 Juta</span>
+        </div>
+        <div class="ss-wrap">
+          <div class="ss-cap">📊 Dashboard TikTok Live Shopping Ads (ROAS 97x Puncak)</div>
+          <img loading="lazy" class="zoomable" src="assets/img/tiktok-live-fashion.webp" alt="TikTok Live Ads">
+        </div>
+      </div>
+
+      <!-- CASE 5: PROPERTY LEAD GEN -->
+      <div class="case-card">
+        <div class="case-badge-row">
+          <span class="case-platform meta">● Meta Ads CTWA</span>
+        </div>
+        <h3 class="case-title">Properti: 2.290+ Leads WhatsApp Prospek Rumah Komersil &amp; Subsidi</h3>
+        <div class="metrics-row">
+          <div class="metric"><span class="metric-val">2.291</span><div class="metric-key">Total Leads WA</div></div>
+          <div class="metric"><span class="metric-val blue">219K</span><div class="metric-key">Jangkauan</div></div>
+          <div class="metric"><span class="metric-val">33</span><div class="metric-key">Kampanye</div></div>
+        </div>
+        <div class="case-details-list">
+          <div class="detail-item">
+            <span class="detail-label">Problem:</span>
+            <span class="detail-val">Biaya akuisisi leads properti seringkali mahal dan banyak leads tidak lolos verifikasi syarat bank.</span>
+          </div>
+          <div class="detail-item">
+            <span class="detail-label">Peran Saya:</span>
+            <span class="detail-val">Setup 33 kampanye CTWA Meta Ads, pengujian copy simulasi KPR bulanan, dan penyaringan penargetan demografi pasangan muda usia 25–40 tahun.</span>
+          </div>
+        </div>
+        <div class="case-period">
+          <span>📅 Jan 2025 – Apr 2026</span>
+          <span>Ad Spend: Rp12,6 Juta</span>
+        </div>
+        <div class="ss-wrap">
+          <div class="ss-cap">📊 Dashboard Meta Ads — Klien Properti (Grand Nusa Indah &amp; Golden Nest)</div>
+          <img loading="lazy" class="zoomable" src="assets/img/meta-properti-leads.webp" alt="Meta Ads Properti">
+        </div>
+      </div>
+
+      <!-- CASE 6: CUSTOM PRINTING -->
+      <div class="case-card">
+        <div class="case-badge-row">
+          <span class="case-platform tiktok">● TikTok GMV Max</span>
+        </div>
+        <h3 class="case-title">Produk Custom: Volume 7.964 Pesanan &amp; Rp236 Juta Revenue</h3>
+        <div class="metrics-row">
+          <div class="metric"><span class="metric-val">7.09x</span><div class="metric-key">ROI</div></div>
+          <div class="metric"><span class="metric-val orange">Rp236 Juta</span><div class="metric-key">Revenue</div></div>
+          <div class="metric"><span class="metric-val">7.964</span><div class="metric-key">Pesanan</div></div>
+        </div>
+        <div class="case-details-list">
+          <div class="detail-item">
+            <span class="detail-label">Problem:</span>
+            <span class="detail-val">Bisnis percetakan custom memerlukan volume pesanan tinggi secara konsisten untuk menjaga efisiensi mesin cetak.</span>
+          </div>
+          <div class="detail-item">
+            <span class="detail-label">Peran Saya:</span>
+            <span class="detail-val">Manajemen kampanye GMV Max jangka panjang, alokasi budget harian, dan monitoring kestabilan ROI di atas batas profitabilitas klien.</span>
+          </div>
+        </div>
+        <div class="case-period">
+          <span>📅 Jan – Apr 2026</span>
+          <span>Ad Spend: Rp33,3 Juta</span>
+        </div>
+        <div class="ss-wrap">
+          <div class="ss-cap">📊 Dashboard TikTok GMV Max — Produk Custom (7.964 Pesanan)</div>
+          <img loading="lazy" class="zoomable" src="assets/img/tiktok-custom-print.webp" alt="TikTok Custom Print">
+        </div>
+      </div>
+
+      <!-- CASE 7: OTOMOTIF VALIDASI CHANNEL -->
+      <div class="case-card">
+        <div class="case-badge-row">
+          <span class="case-platform tiktok">● TikTok GMV Max</span>
+        </div>
+        <h3 class="case-title">Validasi Channel: Revenue Rp181 Juta dari Budget Rp5,7 Juta (3 Bulan)</h3>
+        <div class="metrics-row">
+          <div class="metric"><span class="metric-val">31.67x</span><div class="metric-key">ROI Validasi</div></div>
+          <div class="metric"><span class="metric-val orange">Rp181 Juta</span><div class="metric-key">Revenue</div></div>
+          <div class="metric"><span class="metric-val">565</span><div class="metric-key">Pesanan</div></div>
+        </div>
+        <div class="case-details-list">
+          <div class="detail-item">
+            <span class="detail-label">Problem:</span>
+            <span class="detail-val">Klien baru dengan budget terbatas, butuh validasi apakah TikTok Shop efektif sebelum menaikkan investasi iklan.</span>
+          </div>
+          <div class="detail-item">
+            <span class="detail-label">Peran Saya:</span>
+            <span class="detail-val">Riset audiens aksesoris mobil/motor, setup kampanye GMV Max terarah, dan penguncian bidding ketat. Rata-rata nilai pesanan (AOV) tercatat sekitar Rp320.000 (Rp181 Juta / 565 pesanan).</span>
+          </div>
+        </div>
+        <div class="case-period">
+          <span>📅 Jan – Mar 2026 (3 Bulan)</span>
+          <span>Ad Spend: Rp5,7 Juta</span>
+        </div>
+        <div class="ss-wrap">
+          <div class="ss-cap">📊 Dashboard TikTok GMV Max — Aksesoris Otomotif (ROI 31x)</div>
+          <img loading="lazy" class="zoomable" src="assets/img/tiktok-automotive.webp" alt="TikTok Otomotif">
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- EXPAND / COLLAPSE BUTTON -->
+  <div class="expand-btn-wrap">
+    <button id="toggleCasesBtn" class="btn-expand-cases" onclick="toggleExtraCases()">
+      Lihat 4 Studi Kasus Lainnya (Live Ads, Properti, Percetakan, Otomotif) ↓
+    </button>
+  </div>
 </section>
 
-<!-- BUKTI & TESTIMONI -->
-<section id="bukti">
-  <div class="section-label">Validasi Klien &amp; Media</div>
-  <h2 class="section-title">Bukti Nyata di Luar Angka:<br>Liputan TVRI &amp; Testimoni Klien</h2>
+<!-- SECTION 3: BUKTI NYATA & RETENSI -->
+<section id="bukti-retensi">
+  <div class="section-label">Validasi &amp; Hubungan Klien</div>
+  <h2 class="section-title">Bukti Nyata di Luar Angka: Retensi Klien &amp; Liputan Media</h2>
 
-  <!-- FEATURED STORY: TVRI HIGHLIGHT -->
+  <!-- BLOK RETENSI KLIEN -->
+  <div class="retention-grid">
+    <div class="retention-card">
+      <div>
+        <div class="retention-client">Dapur Alpha (F&amp;B Catering)</div>
+        <p style="font-size:12.5px;color:var(--text-secondary);line-height:1.6;">
+          Kerja sama berkelanjutan dalam manajemen kampanye Meta Ads CTWA dan penetrasi pasar kuliner lokal Kendari.
+        </p>
+      </div>
+      <div class="retention-stat">Kolaborasi 2+ Tahun • 40+ Kampanye Bulanan</div>
+    </div>
+  </div>
+
+  <!-- HIGHLIGHT VALIDASI MEDIA NASIONAL (TVRI) -->
   <div class="highlight-card">
     <div>
-      <div class="highlight-badge">⭐ Bukti Validasi Media Nasional</div>
+      <div class="highlight-badge">⭐ Validasi Media Nasional</div>
       <h3 class="highlight-title">Klien F&amp;B Dapur Alpha Berhasil Diliput TVRI Nasional</h3>
       <p class="highlight-desc">
-        Klien F&amp;B yang dikelola sejak 2023 di Kendari (Sulawesi Tenggara) berhasil menarik perhatian media televisi publik dan diliput langsung oleh TVRI dalam program kuliner unggulan "BAPER (Bawaan Laper)" Episode 3 — buah dari kampanye CTWA berbasis viralitas lokal.
+        Kampanye CTWA yang terarah dan penetrasi jangkauan lokal di Kendari (Sulawesi Tenggara) berhasil menarik atensi media penyiaran publik TVRI, hingga diliput dalam program kuliner "BAPER (Bawaan Laper)" Episode 3 — menjadi bukti bahwa iklan berbayar mampu menggerakkan kesadaran merek nyata di lapangan.
       </p>
       <a href="https://www.youtube.com/watch?v=eVV9-x1AMlU&t=301s" target="_blank" class="tvri-link">
         ▶ Tonton Liputan Resmi TVRI di YouTube
@@ -739,193 +899,52 @@ footer {
     <div class="highlight-metrics">
       <div class="h-metric"><span class="h-metric-label">Durasi Kolaborasi</span><span class="h-metric-val">2+ Tahun</span></div>
       <div class="h-metric"><span class="h-metric-label">Total Kampanye Iklan</span><span class="h-metric-val">40+ Kampanye</span></div>
-      <div class="h-metric"><span class="h-metric-label">Jangkauan Iklan Terluas</span><span class="h-metric-val">187.816 Audiens</span></div>
-      <div class="h-metric"><span class="h-metric-label">Cost per WhatsApp Lead</span><span class="h-metric-val">Rp4.437/chat</span></div>
-    </div>
-  </div>
-
-  <div class="ss-wrap" style="margin-bottom:36px;">
-    <div class="ss-cap">📊 Dashboard Meta Ads — Klien F&amp;B Dapur Alpha (CTWA)</div>
-    <img loading="lazy" class="zoomable" src="assets/img/meta-fnb-alpha.webp" alt="Meta Ads Dapur Alpha">
-  </div>
-
-  <h3 class="sub-title">💬 Kata Klien</h3>
-  <div class="testi-grid">
-    <figure class="testi-card">
-      <img loading="lazy" class="zoomable" src="assets/img/testi-tvri.webp" alt="Testimoni Dapur Alpha diliput TVRI">
-      <figcaption>Klien F&amp;B Dapur Alpha — konfirmasi liputan TVRI</figcaption>
-    </figure>
-    <figure class="testi-card">
-      <img loading="lazy" class="zoomable" src="assets/img/testi-properti.webp" alt="Testimoni klien properti">
-      <figcaption>Klien Properti — 30+ leads masuk</figcaption>
-    </figure>
-  </div>
-</section>
-
-<!-- SECTION KHUSUS: AI-DRIVEN CREATIVE LAB -->
-<section id="creative-lab">
-  <div class="section-label">Inovasi &amp; Efisiensi Alur Kerja</div>
-  <h2 class="section-title">AI-Driven Creative Lab:<br>Produksi Video Iklan Komersial Lebih Cepat &amp; Hemat</h2>
-
-  <div class="ai-duo">
-    <div class="ai-preview-box">
-      <div class="ai-preview-header"><span>🎬 Google Flow / Veo — Madu Araa</span><span style="color:var(--accent-purple);">Produk Fisik</span></div>
-      <div class="ai-preview-body">
-        <img loading="lazy" class="zoomable" src="assets/img/ai-flow-madu-araa.webp" alt="Google Flow Madu Araa">
-        <p class="ai-cap">Aset komersial produk fisik: talent lokal AI, gestur berbicara, dan demo produk tanpa biaya studio.</p>
-      </div>
-    </div>
-    <div class="ai-preview-box">
-      <div class="ai-preview-header"><span>🎬 Google Flow / Veo — BPR KS</span><span style="color:var(--accent-purple);">Jasa Keuangan</span></div>
-      <div class="ai-preview-body">
-        <img loading="lazy" class="zoomable" src="assets/img/ai-flow-bprks.webp" alt="Google Flow BPR KS">
-        <p class="ai-cap">Video CS &amp; pencairan uang untuk BPR KS Tasikmalaya dengan presenter AI berbahasa Indonesia.</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="ai-showcase-grid">
-    <div class="ai-preview-box">
-      <div class="ai-preview-header"><span>✂️ CapCut Desktop Pro</span><span style="color:var(--accent-purple);">Retention Pacing</span></div>
-      <div class="ai-preview-body">
-        <img loading="lazy" class="zoomable" src="assets/img/capcut-editing.webp" alt="Editing CapCut Desktop Pro">
-        <p class="ai-cap">Editing multi-layer untuk menjaga retensi: ritme potongan, caption per kata, dan hook 3 detik pertama.</p>
-      </div>
-    </div>
-    <div class="ai-workflow-steps">
-      <div class="ai-step-card">
-        <div class="ai-step-num">01</div>
-        <div>
-          <h4 class="ai-step-title">Generative Visuals (Google Flow &amp; Veo)</h4>
-          <p class="ai-step-desc">Membuat video komersial dengan talent presenter AI Indonesia (seperti studi kasus Madu Araa &amp; CS BPR KS) memangkas biaya sewa talent dan shooting fisik.</p>
-        </div>
-      </div>
-      <div class="ai-step-card">
-        <div class="ai-step-num">02</div>
-        <div>
-          <h4 class="ai-step-title">Hyper-Realistic Voiceover (ElevenLabs &amp; Gemini)</h4>
-          <p class="ai-step-desc">Menyusun naskah psikologis penawaran via Gemini dan memproduksi sulih suara bahasa Indonesia natural berintonasi tepat via ElevenLabs.</p>
-        </div>
-      </div>
-      <div class="ai-step-card">
-        <div class="ai-step-num">03</div>
-        <div>
-          <h4 class="ai-step-title">Retention Post-Production (CapCut Desktop Pro)</h4>
-          <p class="ai-step-desc">Editing multi-layer berkecepatan tinggi: sinkronisasi audio, dynamic captions per kata, transisi sound effects, dan penguncian hook 3 detik pertama.</p>
-        </div>
-      </div>
-      <div class="ai-step-card">
-        <div class="ai-step-num">04</div>
-        <div>
-          <h4 class="ai-step-title">Agentic Workflow Automation (Hermes &amp; 9router)</h4>
-          <p class="ai-step-desc">Mengotomasi riset angle kompetitor, analisis tren TikTok, dan alur perancangan variasi hook iklan berbasis agen AI otonom.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- HOOK SHOWCASE DARI DATA ASLI -->
-  <div style="margin-top: 40px;">
-    <h3 style="font-size:20px;font-weight:800;color:#ffffff;margin-bottom:8px;">Winning Hook &amp; Angle Breakdown</h3>
-    <p style="font-size:13.5px;color:var(--text-secondary);margin-bottom:20px;">
-      Bedah sudut pandang materi video yang terbukti menghasilkan konversi tinggi di TikTok GMV Max:
-    </p>
-
-    <div class="hooks-grid">
-      <div class="hook-card">
-        <span class="hook-badge curiosity">Curiosity &amp; Relatability</span>
-        <h4 class="hook-title">"Asal Seduh… Kok Malah Enak?!"</h4>
-        <p style="font-size:12.5px;color:var(--text-secondary);line-height:1.6;">
-          Menggunakan angle 'kesalahan pemula' yang justru berhasil. Menghilangkan rasa takut gagal seduh bagi pembeli kopi manual brew pemula.
-        </p>
-        <div class="hook-metric">ROI: 14.29x | Kreator: @morning_grindd</div>
-      </div>
-
-      <div class="hook-card">
-        <span class="hook-badge trend">Trend Culture &amp; AI</span>
-        <h4 class="hook-title">"Nyeduh Pake Resep dr Chat GPT Pake Beans Java Geisha..."</h4>
-        <p style="font-size:12.5px;color:var(--text-secondary);line-height:1.6;">
-          Menggabungkan tren teknologi AI dengan gaya hidup ngopi anak muda, menarik perhatian audiens tech-savvy dan pencari resep unik.
-        </p>
-        <div class="hook-metric">ROI: 9.05x | Revenue: Rp10,1 Juta</div>
-      </div>
-
-      <div class="hook-card">
-        <span class="hook-badge social">Local Pride &amp; Honest Review</span>
-        <h4 class="hook-title">"Support Produk Lokal... Tapi Emang Enak Sih!"</h4>
-        <p style="font-size:12.5px;color:var(--text-secondary);line-height:1.6;">
-          Membangun empati dukungan produk lokal yang diimbangi dengan validasi rasa jujur (social proofing yang tidak terlihat hard-selling).
-        </p>
-        <div class="hook-metric">252 Pesanan | Revenue: Rp29,1 Juta</div>
-      </div>
+      <div class="h-metric"><span class="h-metric-label">Jangkauan Tertinggi</span><span class="h-metric-val">187.816 Warga</span></div>
+      <div class="h-metric"><span class="h-metric-label">Cost per Lead WA</span><span class="h-metric-val">Rp4.437 / chat</span></div>
     </div>
   </div>
 </section>
 
-<!-- SIDE HUSTLE -->
-<section id="sidehustle">
-  <div class="section-label">Personal Project</div>
-  <h2 class="section-title">Side Hustle: Membuktikan Ads<br>dari Kantong Sendiri</h2>
-  <div class="hustle-card">
-    <div>
-      <p class="hustle-period">Jan 2022 – Jan 2024</p>
-      <h3 class="hustle-title">Jualan Produk Fisik via Meta Ads, Sambil Kerja Penuh Waktu</h3>
-      <p class="hustle-desc">Sebelum mengelola klien, saya membuktikan kemampuan Meta Ads dengan berjualan produk fisik secara mandiri memakai strategi CTWA dan LPWA, menghasilkan Rp20 Juta+ dalam 4–5 bulan.</p>
-      <div class="hustle-tags">
-        <span class="skill-pill">Dompet</span><span class="skill-pill">Korset</span><span class="skill-pill">Parfum</span>
-        <span class="skill-pill">Vitamin Herbal</span><span class="skill-pill">Meta Ads CTWA</span><span class="skill-pill">Meta Ads LPWA</span>
-      </div>
-      <p class="hustle-note">📦 Volume pengiriman terverifikasi via mengantar.com &amp; lincah.id</p>
-    </div>
-    <div class="hustle-metrics">
-      <div class="h-metric"><span class="h-metric-label">Revenue 4–5 Bulan</span><span class="h-metric-val">Rp20 Jt+</span></div>
-      <div class="h-metric"><span class="h-metric-label">Durasi Berjalan</span><span class="h-metric-val">2 Tahun</span></div>
-      <div class="h-metric"><span class="h-metric-label">Strategi Utama</span><span class="h-metric-val">CTWA</span></div>
-      <div class="h-metric"><span class="h-metric-label">Kategori Produk</span><span class="h-metric-val">4+</span></div>
-    </div>
-  </div>
-</section>
-
-<!-- FRAMEWORK STRATEGI IKLAN -->
+<!-- SECTION 4: FRAMEWORK STRATEGI IKLAN -->
 <section id="framework">
   <div class="section-label">Metodologi &amp; Sistem Kerja</div>
   <h2 class="section-title">Sistem Kerja Penskalaan Iklan Berkelanjutan</h2>
-  <div class="cases-grid" style="grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));">
-    <div class="case-card">
-      <div style="font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:700;color:var(--accent);margin-bottom:8px;">01 / RISET &amp; ANGLE</div>
-      <h4 style="font-size:16px;font-weight:700;color:#ffffff;margin-bottom:8px;">Angle &amp; Creative Testing</h4>
-      <p style="font-size:13px;color:var(--text-secondary);line-height:1.6;">
-        Menguji coba 5–10 variasi hook visual (video UGC &amp; AI) dan penargetan audiens (Broad vs Lookalike) untuk mengunci winning adset dengan CPA terendah sebelum scaling.
+  <div class="framework-grid">
+    <div class="framework-card">
+      <div class="framework-num">01 / RISET &amp; TESTING</div>
+      <h4 class="framework-title">Creative &amp; Audience Testing</h4>
+      <p class="framework-desc">
+        Melakukan pengujian terstruktur pada multi-angle visual (video UGC kreator &amp; banner) dan segmen audiens untuk menemukan winning adset dengan target CPA/CPL terendah sebelum scaling.
       </p>
     </div>
-    <div class="case-card">
-      <div style="font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:700;color:var(--accent);margin-bottom:8px;">02 / VERTICAL &amp; HORIZONTAL</div>
-      <h4 style="font-size:16px;font-weight:700;color:#ffffff;margin-bottom:8px;">Scaling Architecture</h4>
-      <p style="font-size:13px;color:var(--text-secondary);line-height:1.6;">
-        Menaikkan budget bertahap pada winning adset tanpa merusak fase learning (vertical) serta ekspansi ke segmen audiens baru dan multi-platform (horizontal).
+    <div class="framework-card">
+      <div class="framework-num">02 / SCALING STRATEGY</div>
+      <h4 class="framework-title">Vertical &amp; Horizontal Scaling</h4>
+      <p class="framework-desc">
+        Menaikkan budget bertahap pada winning adset tanpa merusak stabilitas machine learning (vertical) serta ekspansi ke segmentasi audiens broad/lookalike baru (horizontal).
       </p>
     </div>
-    <div class="case-card">
-      <div style="font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:700;color:var(--accent);margin-bottom:8px;">03 / FUNNEL &amp; CLOSING</div>
-      <h4 style="font-size:16px;font-weight:700;color:#ffffff;margin-bottom:8px;">Conversion Flow Optimization</h4>
-      <p style="font-size:13px;color:var(--text-secondary);line-height:1.6;">
-        Memastikan rasio klik ke WhatsApp (CTWA) maupun landing page (LPWA) memiliki load speed cepat, copy USP kuat, serta skrip follow-up tim CS berkonversi tinggi.
+    <div class="framework-card">
+      <div class="framework-num">03 / CONVERSION FUNNEL</div>
+      <h4 class="framework-title">Funnel &amp; Drop-off Audit</h4>
+      <p class="framework-desc">
+        Mengoptimalkan alur konversi dari klik iklan menuju WhatsApp (CTWA) maupun landing page (LPWA): memastikan kecepatan load, kejelasan penawaran (USP), dan kesiapan skrip follow-up tim CS.
       </p>
     </div>
-    <div class="case-card">
-      <div style="font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:700;color:var(--accent);margin-bottom:8px;">04 / TECHNICAL TRACKING</div>
-      <h4 style="font-size:16px;font-weight:700;color:#ffffff;margin-bottom:8px;">CAPI &amp; Real-Time Data</h4>
-      <p style="font-size:13px;color:var(--text-secondary);line-height:1.6;">
-        Audit berkala pada kualitas pixel (Event Match Quality pasca-iOS 14.5), pemantauan CTR, CPC, Frequency, dan tindakan kill/revive adset yang tepat waktu.
+    <div class="framework-card">
+      <div class="framework-num">04 / TRACKING AUDIT</div>
+      <h4 class="framework-title">Tracking &amp; Real-Time Data</h4>
+      <p class="framework-desc">
+        Memastikan akurasi event conversion (Meta CAPI &amp; TikTok Events Manager pasca-iOS 14.5), monitoring metrik harian (CTR, CPC, Frequency), serta tindakan kill/revive kampanye tepat waktu.
       </p>
     </div>
   </div>
 </section>
 
-<!-- SKILLS & TOOLS MATRIX -->
-<section id="skills">
-  <div class="section-label">Kompetensi &amp; Ekosistem Tools</div>
-  <h2 class="section-title">Matriks Keahlian &amp; Penguasaan Teknologi</h2>
+<!-- SECTION 5: KEAHLIAN & EKOSISTEM TOOLS -->
+<section id="keahlian">
+  <div class="section-label">Kompetensi Teknis</div>
+  <h2 class="section-title">Matriks Keahlian &amp; Penguasaan Tools</h2>
 
   <div class="skills-matrix">
     <div class="skill-category">
@@ -942,75 +961,148 @@ footer {
     </div>
 
     <div class="skill-category">
-      <div class="skill-cat-title">🤖 Creative &amp; Generative AI</div>
-      <div class="skill-pill-wrap">
-        <span class="skill-pill">Google Flow / Veo</span>
-        <span class="skill-pill">CapCut Desktop Pro</span>
-        <span class="skill-pill">ElevenLabs Voice AI</span>
-        <span class="skill-pill">Gemini &amp; ChatGPT</span>
-        <span class="skill-pill">Agentic AI (Hermes / 9router)</span>
-        <span class="skill-pill">Adobe Premiere Pro</span>
-        <span class="skill-pill">CorelDRAW</span>
-      </div>
-    </div>
-
-    <div class="skill-category">
-      <div class="skill-cat-title">📊 Tracking, Tech &amp; Data</div>
+      <div class="skill-cat-title">📊 Tracking, Tech &amp; Analytics</div>
       <div class="skill-pill-wrap">
         <span class="skill-pill">Meta Pixel &amp; CAPI</span>
         <span class="skill-pill">TikTok Events Manager</span>
         <span class="skill-pill">Conversion Tracking</span>
         <span class="skill-pill">Scalev Landing Page</span>
         <span class="skill-pill">Python for Data Science</span>
-        <span class="skill-pill">A/B Creative Testing</span>
-        <span class="skill-pill">Ad Audit &amp; Troubleshooting</span>
+        <span class="skill-pill">A/B Testing Framework</span>
+        <span class="skill-pill">Ad Account Audit</span>
       </div>
     </div>
 
     <div class="skill-category">
-      <div class="skill-cat-title">💼 Business &amp; Operations</div>
+      <div class="skill-cat-title">🤖 AI Workflow &amp; Software Tools</div>
+      <div class="skill-pill-wrap">
+        <span class="skill-pill">Google Flow / Veo</span>
+        <span class="skill-pill">CapCut Desktop Pro</span>
+        <span class="skill-pill">ElevenLabs Voice AI</span>
+        <span class="skill-pill">Gemini &amp; ChatGPT</span>
+        <span class="skill-pill">Hermes &amp; 9router (Automation)</span>
+        <span class="skill-pill">Adobe Premiere Pro</span>
+        <span class="skill-pill">CorelDRAW</span>
+      </div>
+    </div>
+
+    <div class="skill-category">
+      <div class="skill-cat-title">💼 Media Buying Management</div>
       <div class="skill-pill-wrap">
         <span class="skill-pill">ROAS &amp; ROI Optimization</span>
         <span class="skill-pill">CPA / CPL Cost Control</span>
-        <span class="skill-pill">Omnichannel Strategy</span>
         <span class="skill-pill">Multi-Account Management</span>
+        <span class="skill-pill">Omnichannel Budget Allocation</span>
         <span class="skill-pill">Affiliate Mass Authorization</span>
-        <span class="skill-pill">Workshop Mentorship</span>
-        <span class="skill-pill">Stakeholder Relations</span>
+        <span class="skill-pill">Performance Reporting</span>
       </div>
-    </div>
-  </div>
-
-  <!-- REKAM JEJAK AGENSI & MENTORSHIP -->
-  <div id="tentang" class="agency-card">
-    <div class="record-item">
-      <h4>🏢 Kapasitas Agensi &amp; Manajemen Multi-Klien</h4>
-      <p>
-        Sebagai <strong>Digital Ads Specialist di Jawara Digital Agency</strong>, pernah mengelola hingga <strong>25 klien aktif per bulan</strong> secara simultan (sektor F&amp;B, properti, dan jasa keuangan) dengan akumulasi anggaran iklan Rp75 Juta+ per bulan dan menaikkan ROAS klien hingga 8x.
-      </p>
-    </div>
-    <div class="record-item">
-      <h4>👨‍🏫 Edukasi &amp; Asistensi Teknis Iklan</h4>
-      <p>
-        Berperan sebagai <strong>Workshop Technical Assistant di Kelas Jawara</strong> mendampingi 20–50 peserta per sesi (UMKM hingga korporat) dalam audit akun iklan, setup Meta Ads Manager, TikTok Shop Ads, integrasi katalog, dan penyelesaian kendala teknis tracking konversi.
-      </p>
     </div>
   </div>
 </section>
 
-<!-- CTA HIRING -->
+<!-- SECTION 6: EKSPERIMEN AI UNTUK WORKFLOW IKLAN (LOWER PRIORITY) -->
+<section id="eksperimen-ai">
+  <div class="section-label">Eksperimen &amp; Efisiensi Alur Kerja</div>
+  <h2 class="section-title">Eksperimen AI untuk Efisiensi Workflow Iklan</h2>
+
+  <div class="ai-section-box">
+    <p class="ai-intro">
+      Di luar eksekusi media buying harian, saya mendalami pemanfaatan kecerdasan buatan (AI) sebagai kemampuan pendukung untuk <strong>mempercepat pengujian angle, memvalidasi ide materi iklan secara mandiri, dan mengotomasi analisis tren</strong>—memungkinkan perumusan hipotesis testing iklan dilakukan lebih cepat sebelum produksi skala besar.
+    </p>
+
+    <div class="ai-cols">
+      <div class="ai-col-card">
+        <h4>1. Validasi Ide &amp; Storyboard Cepat (Google Flow / Veo)</h4>
+        <p>
+          Bereksperimen membuat simulasi presenter talent lokal dan visualisasi produk (studi kasus Madu Araa &amp; CS BPR KS) guna menguji relevansi hook sebelum merekomendasikan arahan ke kreator afiliasi.
+        </p>
+        <div class="ss-wrap">
+          <div class="ss-cap">Aset Visual AI: Google Flow / Veo (Madu Araa)</div>
+          <img loading="lazy" class="zoomable" src="assets/img/ai-flow-madu-araa.webp" alt="Google Flow Madu Araa">
+        </div>
+        <div style="margin-top: 10px; text-align: center;">
+          <a href="https://drive.google.com/file/d/17244m7CSBLKvGnpXZTGpoxnawrri1bL6/view?usp=sharing" target="_blank" class="btn-secondary" style="font-size: 11.5px; padding: 6px 14px; width: 100%; justify-content: center;">
+            ▶ Tonton Sampel Video Hasil AI di Google Drive
+          </a>
+        </div>
+        <div class="ss-wrap" style="margin-top: 12px;">
+          <div class="ss-cap">Aset Visual AI: Google Flow / Veo (BPR KS Customer Service)</div>
+          <img loading="lazy" class="zoomable" src="assets/img/ai-flow-bprks.webp" alt="Google Flow BPRKS">
+        </div>
+      </div>
+
+      <div class="ai-col-card">
+        <h4>2. Analisis Retensi &amp; Pacing di CapCut Desktop Pro</h4>
+        <p>
+          Menganalisis pacing video, pemotongan jeda kosong (dead air), penguncian hook teks 3 detik pertama ('Gimana Cara AI-nya Mikir'), dan sinkronisasi audio untuk mempertahankan audiens retention rate di TikTok &amp; Reels.
+        </p>
+        <div class="ss-wrap">
+          <div class="ss-cap">Bedah Timeline Editing &amp; Dynamic Captions di CapCut</div>
+          <img loading="lazy" class="zoomable" src="assets/img/capcut-editing.webp" alt="CapCut Timeline Hook Analysis">
+        </div>
+        <p style="font-size: 11.5px; color: var(--text-muted); margin-top: 8px; line-height: 1.5;">
+          Fokus analisis: Menguji retensi 3 detik pertama (hook rate), penempatan caption dinamis per kata, dan penataan transisi suara agar iklan tidak terasa membosankan.
+        </p>
+      </div>
+    </div>
+
+    <!-- WINNING HOOK BREAKDOWN -->
+    <div style="margin-top: 32px;">
+      <h4 style="font-size:15px;font-weight:700;color:#ffffff;margin-bottom:6px;">
+        Analisis Performa Angle &amp; Arahan Kreatif Terbukti
+      </h4>
+      <p style="font-size:12.5px;color:var(--text-secondary);margin-bottom:14px;">
+        <em>Peran saya: Menganalisis data performa kampanye dan merumuskan arahan angle kreatif kepada kreator afiliasi, bukan memproduksi video secara langsung.</em>
+      </p>
+
+      <div class="hooks-grid">
+        <div class="hook-card">
+          <span class="hook-badge curiosity">Curiosity &amp; Relatability</span>
+          <div class="hook-title">"Asal Seduh… Kok Malah Enak?!"</div>
+          <p style="font-size:12px;color:var(--text-secondary);line-height:1.55;">
+            Angle 'kesalahan seduh pemula' yang menghilangkan rasa takut pembeli kopi manual brew baru.
+          </p>
+          <div class="hook-metric">ROI: 14.29x | Kreator: @morning_grindd</div>
+        </div>
+
+        <div class="hook-card">
+          <span class="hook-badge trend">Trend Culture &amp; AI</span>
+          <div class="hook-title">"Nyeduh Pake Resep dr Chat GPT Pake Beans Java Geisha..."</div>
+          <p style="font-size:12px;color:var(--text-secondary);line-height:1.55;">
+            Mengaitkan tren teknologi AI dengan gaya hidup ngopi anak muda untuk menarik audiens tech-savvy.
+          </p>
+          <div class="hook-metric">ROI: 9.05x | Revenue: Rp10,1 Juta</div>
+        </div>
+
+        <div class="hook-card">
+          <span class="hook-badge social">Local Pride &amp; Honest Review</span>
+          <div class="hook-title">"Support Produk Lokal... Tapi Emang Enak Sih!"</div>
+          <p style="font-size:12px;color:var(--text-secondary);line-height:1.55;">
+            Membangun empati dukungan produk lokal yang diimbangi dengan validasi rasa objektif tanpa hard-selling.
+          </p>
+          <div class="hook-metric">252 Pesanan | Revenue: Rp29,1 Juta</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA PENUTUP (HIRING FOCUS) -->
 <section style="padding-top: 0;">
   <div class="cta-banner">
-    <h3>Siap Mengakselerasi Pertumbuhan Bisnis Anda?</h3>
+    <h3>Sedang Mencari Digital Ads Specialist untuk Tim Anda?</h3>
     <p>
-      Terbuka untuk posisi <strong>Full-Time, Contract, atau Remote Senior Digital Ads Specialist</strong>. Mari diskusikan bagaimana strategi multi-channel dan alur kerja AI ini dapat melipatgandakan profitabilitas bisnis Anda.
+      Saya siap berkontribusi secara langsung untuk mengelola dan men-scale performa periklanan berbayar perusahaan Anda. Terbuka untuk penempatan <strong>Full-Time, Contract, atau Remote</strong>.
     </p>
     <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
-      <a href="https://wa.me/6282374381250?text=Halo%20Andri%20Faisal,%20kami%20tertarik%20dengan%20portofolio%20Ads%20Anda" target="_blank" class="btn-primary" style="padding:12px 28px;font-size:14.5px;">
-        💬 Diskusi via WhatsApp
+      <a href="CV_Andri_Faisal_Rahman.pdf" target="_blank" download class="btn-primary" style="padding:11px 26px;font-size:14px;">
+        📄 Unduh CV (PDF)
       </a>
-      <a href="mailto:andrifaisalrahmans@gmail.com" class="btn-secondary" style="padding:12px 28px;font-size:14.5px;">
-        ✉️ Kirim Penawaran Email
+      <a href="https://wa.me/6282374381250?text=Halo%20Andri%20Faisal,%20kami%20tertarik%20mengundang%20Anda%20interview%20posisi%20Digital%20Ads%20Specialist" target="_blank" class="btn-secondary" style="padding:11px 26px;font-size:14px;">
+        💬 Hubungi via WhatsApp
+      </a>
+      <a href="mailto:andrifaisalrahmans@gmail.com" class="btn-secondary" style="padding:11px 26px;font-size:14px;">
+        ✉️ Kirim Email
       </a>
     </div>
   </div>
@@ -1019,46 +1111,34 @@ footer {
 <!-- FOOTER -->
 <footer>
   <div class="footer-name">Andri Faisal Rahman</div>
-  <div style="font-size:12.5px;color:var(--text-muted);">
-    Senior Digital Ads &amp; Growth Specialist • Jakarta, Indonesia
+  <div style="font-size:12px;color:var(--text-muted);">
+    Digital Ads Specialist • Jakarta, Indonesia
   </div>
   <div class="footer-links">
-    <a href="mailto:andrifaisalrahmans@gmail.com">Email</a>
     <a href="https://linkedin.com/in/andrifaisalrahman" target="_blank">LinkedIn</a>
+    <a href="mailto:andrifaisalrahmans@gmail.com">Email</a>
     <a href="https://wa.me/6282374381250" target="_blank">WhatsApp</a>
-    <a href="https://faisal686.github.io/portofolio/">Live Website</a>
+    <a href="CV_Andri_Faisal_Rahman.pdf" target="_blank" download>Unduh CV</a>
   </div>
 </footer>
 
-<!-- SCRIPT FILTER TAB INTERAKTIF -->
+<!-- JAVASCRIPT EXPAND / COLLAPSE EXTRA CASES -->
 <script>
-function filterCases(category, btn) {
-  // Update active tab style
-  document.querySelectorAll('.filter-tab').forEach(t => t.classList.remove('active'));
-  btn.classList.add('active');
-
-  // Filter case cards
-  const cards = document.querySelectorAll('#caseGrid .case-card');
-  cards.forEach(card => {
-    if (category === 'all') {
-      card.style.display = '';
-    } else {
-      const cats = card.getAttribute('data-category') || '';
-      if (cats.split(' ').includes(category)) {
-        card.style.display = '';
-      } else {
-        card.style.display = 'none';
-      }
-    }
-  });
+function toggleExtraCases() {
+  const container = document.getElementById('extraCasesContainer');
+  const btn = document.getElementById('toggleCasesBtn');
+  if (container.style.display === 'none') {
+    container.style.display = 'block';
+    btn.innerHTML = 'Sembunyikan Studi Kasus Lainnya ↑';
+  } else {
+    container.style.display = 'none';
+    btn.innerHTML = 'Lihat 4 Studi Kasus Lainnya (Live Ads, Properti, Percetakan, Otomotif) ↓';
+  }
 }
 
 document.body.insertAdjacentHTML('beforeend','<div id="lightbox"><img alt=""></div>');
 const lb=document.getElementById('lightbox');
-document.addEventListener('click',e=>{
-  if(e.target.classList.contains('zoomable')){lb.querySelector('img').src=e.target.src;lb.classList.add('open');}
-  else if(lb.classList.contains('open')){lb.classList.remove('open');}
-});
+document.addEventListener('click',e=>{if(e.target.classList.contains('zoomable')){lb.querySelector('img').src=e.target.src;lb.classList.add('open');}else if(lb.classList.contains('open')){lb.classList.remove('open');}});
 document.addEventListener('keydown',e=>{if(e.key==='Escape')lb.classList.remove('open');});
 </script>
 
